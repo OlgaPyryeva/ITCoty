@@ -1,5 +1,9 @@
 import React from "react";
 
 export default function Policy() {
-  return;
+  return (
+    <div>
+      <h1>Политика конфиденциальности</h1>
+    </div>
+  );
 }

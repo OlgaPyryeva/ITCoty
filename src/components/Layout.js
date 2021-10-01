@@ -7,8 +7,8 @@ import {
   Route,
 } from "react-router-dom";
 import Registration from "./registration/Registration";
-// import Policy from "./docs/Policy";
-// import Rules from "./docs/Rules";
+import Policy from "./docs/Policy";
+import Rules from "./docs/Rules";
 
 export default function Layout() {
   return (
@@ -16,8 +16,8 @@ export default function Layout() {
       <Switch>
         <Route exact path="/" render={() => <Login />} />
         <Route path="/registration" render={() => <Registration />} />
-        {/* <Route path="/policy" render={() => <Policy />} />
-        <Route path="/rules" render={() => <Rules />} /> */}
+        <Route path="/policy" render={() => <Policy />} />
+        <Route path="/rules" render={() => <Rules />} />
       </Switch>
     </BrowserRouter>
   );

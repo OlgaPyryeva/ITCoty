@@ -2,9 +2,11 @@ import React, { useState, useEffect } from "react";
 import "./Login.css";
 import axios from "axios";
 import { Link } from "react-router-dom";
-import GoogleButton from "react-google-button";
-// import Policy from "./docs/Policy";
-// import Rules from "./docs/Rules";
+import facebook from "./img/facebook.svg";
+import google from "./img/google.svg";
+import linkedIn from "./img/linkedIn.svg";
+import Policy from "../docs/Policy";
+import Rules from "../docs/Rules";
 
 export default function Login() {
   const [email, setEmail] = useState();
@@ -38,9 +40,9 @@ export default function Login() {
 
   const passwordHandler = (e) => {
     setPassword(e.target.value);
-    const rec =
-      /[А-Я,а-я,A-Z,a-z,0-9, ! # $ % & ' * + - / = ? ^ _ ` { | } ~]1-64/;
-    if (!rec.test(String(e.target.value).toLowerCase())) {
+    const pas =
+      /[А-Я,а-я,A-Z,a-z,0-9, ! # $ % & ' * + - / = ? ^ _ ` { | } ~]7-64/;
+    if (!pas.test(String(e.target.value).toLowerCase())) {
       setPasswordError(
         "Некорректный password - длинна должна быть не менее 7 символов"
       );
@@ -72,30 +74,28 @@ export default function Login() {
         <h3>Зарегистрируйтесь с помощью:</h3>
         <button>
           <img
-            src="./img/Facebook-Logo.wine.svg"
+            src={facebook}
             alt="facebook logo"
             title="Продолжить через facebook"
           />
         </button>
         <button>
           <img
-            src="././img/LinkedIn-Logo.wine.svg"
+            src={linkedIn}
             alt="linkedin logo"
             title="Продолжить через linkedin"
           />
         </button>
         <button>
           <img
-            src="./img/Google-Logo.wine.svg"
+            src={google}
             alt="facebook logo"
             title="Продолжить через facebook"
           />
         </button>
 
-        <p>
-          ----------------------------------- или
-          -----------------------------------
-        </p>
+        <hr />
+        <h3>или</h3>
         {emailVisited && emailError && (
           <div className="errorMessage">{emailError}</div>
         )}
@@ -135,11 +135,11 @@ export default function Login() {
         </Link>
         <input type="checkbox" id="custom-checkbox" />
         <label for="custom-checkbox">Запомнить меня</label>
-        {/* <p>
-            Продолжая, вы соглашаетесь с нашей{" "}
-            <Link to="/policy"> политикой конфиденциальности </Link> и
-            <Link to="/rules">пользовательским соглашением</Link>.
-          </p> */}
+        <p>
+          Продолжая, вы соглашаетесь с нашей{" "}
+          <Link to="/policy"> политикой конфиденциальности </Link>и
+          <Link to="/rules"> пользовательским соглашением </Link>.
+        </p>
         <p>хотите восстановить пароль?</p>
       </div>
     </div>
