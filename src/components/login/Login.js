@@ -20,7 +20,7 @@ export default function Login() {
   const [formValid, setFormValid] = useState(false);
 
   useEffect(() => {
-    if (emailError || passwordError) {
+    if (emailError && passwordError) {
       setFormValid(false);
     } else {
       setFormValid(true);
@@ -30,7 +30,7 @@ export default function Login() {
   const emailHandler = (e) => {
     setEmail(e.target.value);
     const re =
-      /[a–z, A–Z,0-9, ! # $ % & ' * + - / = ? ^ _ ` { | } ~]1-64[@]1[a-z,0-9, -.]1-63[.]1C2-3/;
+      /[a–zA–Z0-9,. ! # $ % & ' * + - / = ? ^ _ ` { | } ~]{1,64}[@]{1,}[a-z,0-9, -.]{1,63}[.]{1}/;
     if (!re.test(String(e.target.value).toLowerCase())) {
       setEmailError("Некорректный email");
     } else {
@@ -41,10 +41,10 @@ export default function Login() {
   const passwordHandler = (e) => {
     setPassword(e.target.value);
     const pas =
-      /[А-Я,а-я,A-Z,a-z,0-9, ! # $ % & ' * + - / = ? ^ _ ` { | } ~]7-64/;
+      /(?=.*[0-9])(?=.*[a-zA-Z! # $ % & ' * + - / = ? ^ _ ` { | } ~]){7,}/;
     if (!pas.test(String(e.target.value).toLowerCase())) {
       setPasswordError(
-        "Некорректный password - длинна должна быть не менее 7 символов"
+        "Пароль должен содержать буквы(a-z) и цифры и быть длинной не менее 7 символов"
       );
     } else {
       setPasswordError("");
@@ -94,7 +94,6 @@ export default function Login() {
             title="Продолжить через facebook"
           />
         </button>
-        <hr />
         <h3>или</h3>
         {emailVisited && emailError && (
           <div className="errorMessage">{emailError}</div>
@@ -116,7 +115,7 @@ export default function Login() {
           onBlur={(e) => blurHandler(e)}
           name="password"
           value={password}
-          type="password"
+          type="text"
           placeholder="Введите пароль"
           className="password"
         />
