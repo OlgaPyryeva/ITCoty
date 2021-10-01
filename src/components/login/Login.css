@@ -68,13 +68,15 @@ button {
   position: absolute;
   opacity: 0;
 }
-#custom-checkbox + label {
+#custom-checkbox + label,
+#policy-checkbox + label {
   position: relative;
-  margin: 20px 0;
+  margin: 10px 0;
   text-transform: none;
   cursor: pointer;
 }
-#custom-checkbox + label:before {
+#custom-checkbox + label:before,
+#policy-checkbox + label:before {
   content: "";
   display: inline-block;
   width: 20px;
@@ -83,14 +85,16 @@ button {
   vertical-align: text-top;
   background: white;
 }
-#custom-checkbox:checked + label:before {
+#custom-checkbox:checked + label:before,
+#policy-checkbox:checked + label:before {
   background: #1762ee;
 }
-#custom-checkbox:checked + label:after {
+#custom-checkbox:checked + label:after,
+#policy-checkbox:checked + label:after {
   content: "";
   position: absolute;
-  width: 2px;
-  height: 2px;
+  width: 1px;
+  height: 1px;
   left: 20px;
   top: 9px;
   background: white;
@@ -107,8 +111,51 @@ button {
   display: inline;
   margin: 0 20px 20px 0;
   width: 200px;
+  text-decoration: none;
 }
 
 .errorMessage {
   color: red;
+}
+.cl-btn-7 {
+  width: 40px;
+  height: 40px;
+  border-radius: 40px;
+  position: relative;
+  left: 250px;
+  z-index: 1;
+  margin: 5px auto;
+  cursor: pointer;
+}
+.cl-btn-7:before {
+  content: "+";
+  color: #337ab7;
+  position: absolute;
+  z-index: 2;
+  transform: rotate(45deg);
+  font-size: 50px;
+  line-height: 1;
+  top: -5px;
+  left: 6px;
+  transition: all 0.3s cubic-bezier(0.77, 0, 0.2, 0.85);
+}
+.cl-btn-7:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 100%;
+  background: #337ab7;
+  z-index: 1;
+  transition: all 0.3s cubic-bezier(0.77, 0, 0.2, 0.85);
+  transform: scale(0.01);
+}
+.cl-btn-7:hover:after {
+  transform: scale(1);
+}
+.cl-btn-7:hover:before {
+  transform: scale(0.8) rotate(45deg);
+  color: #fff;
 }
