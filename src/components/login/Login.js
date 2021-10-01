@@ -71,6 +71,7 @@ export default function Login() {
   return (
     <div className="transparent">
       <div className="form-inner">
+        <div class="cl-btn-7"></div>
         <h3>Зарегистрируйтесь с помощью:</h3>
         <button>
           <img
@@ -93,7 +94,6 @@ export default function Login() {
             title="Продолжить через facebook"
           />
         </button>
-
         <hr />
         <h3>или</h3>
         {emailVisited && emailError && (
@@ -106,10 +106,8 @@ export default function Login() {
           value={email}
           type="text"
           placeholder="Создать аккаунт с помощью email"
-          // onChange={(e) => setEmail(e.target.value)}
           className="email"
         />
-
         {passwordVisited && passwordError && (
           <div className="errorMessage">{passwordError}</div>
         )}
@@ -118,16 +116,13 @@ export default function Login() {
           onBlur={(e) => blurHandler(e)}
           name="password"
           value={password}
-          type="text"
+          type="password"
           placeholder="Введите пароль"
-          // onChange={(e) => setPassword(e.target.value)}
           className="password"
         />
-
-        <button disabled={!formValid} onClick={postData} className="btn">
+        <button onClick={postData} className="btn">
           Войти
         </button>
-
         <Link to="/registration">
           <button type="submit" className="btn">
             Зарегистрироваться
@@ -135,12 +130,13 @@ export default function Login() {
         </Link>
         <input type="checkbox" id="custom-checkbox" />
         <label for="custom-checkbox">Запомнить меня</label>
-        <p>
+        <input type="checkbox" id="policy-checkbox" />
+        <label for="policy-checkbox">
           Продолжая, вы соглашаетесь с нашей{" "}
           <Link to="/policy"> политикой конфиденциальности </Link>и
           <Link to="/rules"> пользовательским соглашением </Link>.
-        </p>
-        <p>хотите восстановить пароль?</p>
+        </label>
+        <button> Восстановить пароль?</button>
       </div>
     </div>
   );
