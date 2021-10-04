@@ -3,22 +3,24 @@
   padding: 0;
 }
 .header {
+  /* width: 1440px; */
+
   font-family: "Raleway", sans-serif;
   border: 2px solid #ccc;
   display: flex;
-  flex-wrap: wrap; /*перенос строки */
-  justify-content: space-between; /*прижимает содержимое к краям */
-  align-items: center; /*выравнивает элементы по центру на вертикальной */
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .logo img {
-  padding: 0 0 0 30px;
+  padding-left: 30px;
   width: 103px;
   height: 21px;
-  background-color: ;
+  background-color: #4985ff;
 }
 .menu {
-  width: 522px;
+  /* width: 522px; */
 }
 
 .header .menu ul {
@@ -27,22 +29,33 @@
 }
 
 .header .menu ul li {
-  margin: 20px 10px;
+  margin: 20px 20px;
+}
+.header .menu ul li span {
+  margin: -10px 2px 0 0;
 }
 
 .header .menu ul a {
-  text-transform: uppercase;
   text-decoration: none;
-  font-weight: bold;
-  color: #424242;
+  font-weight: normal;
+  color: #000;
+}
+@media screen and (max-width: 900px) {
+  ..menu ul li span {
+    margin: auto;
+  }
 }
 
-.userIdentification {
-  width: 16px;
-  height: 16px;
-  color: #333;
-  padding-right: 40px;
-}
-.leng {
-  width: 40px;
+@media screen and (max-width: 500px) {
+  .header {
+    flex-direction: column;
+  }
+  .header .menu ul {
+    flex-direction: column;
+    justify-content: left;
+    align-self: center;
+  }
+  .header .menu ul li {
+    margin: 5px;
+  }
 }

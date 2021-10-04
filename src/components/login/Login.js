@@ -65,7 +65,7 @@ export default function Login() {
   };
 
   function postData() {
-    axios.post("https//sever", { email, password });
+    axios.post("http://uranus123.herokuapp.com", { email, password });
   }
 
   return (
@@ -122,7 +122,7 @@ export default function Login() {
         <button onClick={postData} className="btn">
           Войти
         </button>
-        <Link to="/registration">
+        <Link to="/register">
           <button type="submit" className="btn">
             Зарегистрироваться
           </button>

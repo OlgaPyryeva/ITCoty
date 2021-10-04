@@ -22,7 +22,7 @@ export default function Layout() {
       <Switch>
         <Route exact path="/" render={() => <Home />} />
         <Route path="/login" render={() => <Login />} />
-        <Route path="/registration" render={() => <Registration />} />
+        <Route path="/register" render={() => <Registration />} />
         <Route path="/policy" render={() => <Policy />} />
         <Route path="/rules" render={() => <Rules />} />
         <Route path="/business" render={() => <Business />} />

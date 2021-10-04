@@ -30,18 +30,17 @@ export default function NavBar() {
           <li>
             <Link to="/traineeship">Стажировки</Link>
           </li>
+          <li>
+            <span>RU</span>
+            <span class="material-icons">expand_more</span>
+          </li>
+          <li>
+            <Link to="/login">
+              <span class="material-icons">perm_identity</span>
+            </Link>
+          </li>
         </ul>
       </nav>
-      <div className="lang">
-        <li>
-          <button>RU</button>
-        </li>
-      </div>
-      <div className="userIdentification">
-        <Link to="/login">
-          <span class="material-icons">perm_identity</span>
-        </Link>
-      </div>
     </header>
   );
 }
