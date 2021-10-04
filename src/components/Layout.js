@@ -9,7 +9,7 @@ import {
 import Registration from "./registration/Registration";
 import Policy from "./docs/Policy";
 import Rules from "./docs/Rules";
-import NavBar from "./pages/main/NavBar";
+import NavBar from "./pages/main/navbar/NavBar";
 import Home from "./pages/main/Home";
 import Business from "./pages/Business";
 import Events from "./pages/Events";

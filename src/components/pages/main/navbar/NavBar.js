@@ -1,6 +1,6 @@
 import React from "react";
 import logo from "./logo.png";
-import Search from "./Search";
+import Search from "../Search";
 import { Link } from "react-router-dom";
 import "./NavBar.css";
 
