@@ -1,0 +1,48 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+.header {
+  font-family: "Raleway", sans-serif;
+  border: 2px solid #ccc;
+  display: flex;
+  flex-wrap: wrap; /*перенос строки */
+  justify-content: space-between; /*прижимает содержимое к краям */
+  align-items: center; /*выравнивает элементы по центру на вертикальной */
+}
+
+.logo img {
+  padding: 0 0 0 30px;
+  width: 103px;
+  height: 21px;
+  background-color: ;
+}
+.menu {
+  width: 522px;
+}
+
+.header .menu ul {
+  display: flex;
+  list-style: none;
+}
+
+.header .menu ul li {
+  margin: 20px 10px;
+}
+
+.header .menu ul a {
+  text-transform: uppercase;
+  text-decoration: none;
+  font-weight: bold;
+  color: #424242;
+}
+
+.userIdentification {
+  width: 16px;
+  height: 16px;
+  color: #333;
+  padding-right: 40px;
+}
+.leng {
+  width: 40px;
+}

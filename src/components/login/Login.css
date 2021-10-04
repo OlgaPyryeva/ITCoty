@@ -6,7 +6,8 @@
   max-width: 600px;
   padding: 30px 20px;
   margin: 20px auto 0;
-  background-image: url(https://st.depositphotos.com/2251265/2748/i/600/depositphotos_27485747-stock-photo-large-window-into-white-office.jpg);
+  /* background-image: url(https://st.depositphotos.com/2251265/2748/i/600/depositphotos_27485747-stock-photo-large-window-into-white-office.jpg); */
+  background-color: #4985ff;
   background-size: cover;
 }
 .transparent:before {
@@ -41,7 +42,7 @@
   bottom: -6px;
   height: 2px;
   width: 550px;
-  background: #1762ee;
+  /* background: #1762ee; */
 }
 .form-inner label {
   display: block;
@@ -60,9 +61,10 @@ button {
   border-width: 0;
   line-height: 40px;
   border-radius: 20px;
-  color: white;
-  background: rgba(255, 255, 255, 0.2);
+  color: rgba(61, 57, 57, 0.897);
+  background: rgba(255, 255, 255, 0.5);
   font-family: "Roboto", sans-serif;
+  font-size: 18px;
 }
 .form-inner input[type="checkbox"] {
   position: absolute;
@@ -111,7 +113,7 @@ button {
   display: inline;
   margin: 0 20px 20px 0;
   width: 200px;
-  text-decoration: none;
+  font-size: 18px;
 }
 
 .errorMessage {
