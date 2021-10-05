@@ -29,8 +29,7 @@ export default function Login() {
 
   const emailHandler = (e) => {
     setEmail(e.target.value);
-    const re =
-      /[a–zA–Z0-9,. ! # $ % & ' * + - / = ? ^ _ ` { | } ~]{1,64}[@]{1,}[a-z,0-9, -.]{1,63}[.]{1}/;
+    const re = /[@]{1,}[a-z,0-9, -.]{1,63}[.]{1}[a-zA-Z]{1,15}/;
     if (!re.test(String(e.target.value).toLowerCase())) {
       setEmailError("Некорректный email");
     } else {
@@ -65,7 +64,14 @@ export default function Login() {
   };
 
   function postData() {
-    axios.post("http://uranus123.herokuapp.com", { email, password });
+    axios
+      .get("http://uranus123.herokuapp.com", { email, password })
+      .then(function (response) {
+        console.log(response);
+      })
+      .catch(function (error) {
+        console.log(error);
+      });
   }
 
   return (
@@ -127,6 +133,7 @@ export default function Login() {
             Зарегистрироваться
           </button>
         </Link>
+
         <input type="checkbox" id="custom-checkbox" />
         <label for="custom-checkbox">Запомнить меня</label>
         <input type="checkbox" id="policy-checkbox" />

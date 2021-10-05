@@ -3,24 +3,18 @@
   padding: 0;
 }
 .header {
-  /* width: 1440px; */
-
+  width: 100%;
   font-family: "Raleway", sans-serif;
   border: 2px solid #ccc;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
+  position: fixed;
 }
 
 .logo img {
   padding-left: 30px;
-  width: 103px;
-  height: 21px;
-  background-color: #4985ff;
-}
-.menu {
-  /* width: 522px; */
 }
 
 .header .menu ul {
@@ -31,7 +25,7 @@
 .header .menu ul li {
   margin: 20px 20px;
 }
-.header .menu ul li span {
+.header .menu ul li img {
   margin: -10px 2px 0 0;
 }
 

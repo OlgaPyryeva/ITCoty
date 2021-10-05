@@ -1,5 +1,8 @@
 import React from "react";
-import logo from "./logo.png";
+import logo from "../navbar/img/logo.svg";
+import searchIcon from "../navbar/img/searchIcon.svg";
+import loginIcon from "../navbar/img/loginIcon.svg";
+import langIcon from "../navbar/img/langIcon.svg";
 import Search from "../Search";
 import { Link } from "react-router-dom";
 import "./NavBar.css";
@@ -13,7 +16,7 @@ export default function NavBar() {
       <nav className="menu">
         <ul>
           <li>
-            <Search />
+            <img src={searchIcon} alt={"searchIcon"} />
           </li>
           <li>
             <Link to="/">Главная</Link>
@@ -32,11 +35,11 @@ export default function NavBar() {
           </li>
           <li>
             <span>RU</span>
-            <span class="material-icons">expand_more</span>
+            <img src={langIcon} alt={"langIcon"} />
           </li>
           <li>
             <Link to="/login">
-              <span class="material-icons">perm_identity</span>
+              <img src={loginIcon} alt={"loginIcon"} />
             </Link>
           </li>
         </ul>
