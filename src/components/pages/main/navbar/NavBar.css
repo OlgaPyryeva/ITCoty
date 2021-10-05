@@ -35,7 +35,7 @@
   color: #000;
 }
 @media screen and (max-width: 900px) {
-  ..menu ul li span {
+  .menu ul li span {
     margin: auto;
   }
 }

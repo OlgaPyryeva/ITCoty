@@ -1,27 +1,21 @@
-import React, { useState } from "react";
-import Carousel from "@brainhubeu/react-carousel";
-import "@brainhubeu/react-carousel/lib/style.css";
-import imageOne from "./img/imgOne.svg";
+import React from "react";
+import Carousel from "nuka-carousel";
+import Slaide1 from "./slides/Slaide1";
 
-const MyCarousel = () => {
-  const [value, setValue] = useState(0);
-  const onChange = (value) => {
-    setValue(value);
+export default class extends React.Component {
+  state = {
+    slideIndex: 0,
   };
 
-  return (
-    <div>
-      <h1>Удобный поиск стажировок и вакансий в IT</h1>
-      <div>
-        Краткий текст с описанием преимуществ ресурса, предложение, от которого
-        невозможно отказаться{" "}
-      </div>
-      <button>Подробнее</button>
-      <Carousel value={value} onChange={onChange}>
-        <img src={imageOne} />
+  render() {
+    return (
+      <Carousel
+        slideIndex={this.state.slideIndex}
+        afterSlide={(slideIndex) => this.setState({ slideIndex })}
+      >
+        <Slaide1 />
+        <Slaide1 />
       </Carousel>
-    </div>
-  );
-};
-
-export default MyCarousel;
+    );
+  }
+}
