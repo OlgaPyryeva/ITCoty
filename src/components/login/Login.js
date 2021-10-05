@@ -2,11 +2,9 @@ import React, { useState, useEffect } from "react";
 import "./Login.css";
 import axios from "axios";
 import { Link } from "react-router-dom";
-import facebook from "./img/facebook.svg";
-import google from "./img/google.svg";
-import linkedIn from "./img/linkedIn.svg";
 import Policy from "../docs/Policy";
 import Rules from "../docs/Rules";
+import SocialNetworkReg from "../socialNetworkReg/SocialNetworkReg";
 
 export default function Login() {
   const [email, setEmail] = useState();
@@ -67,7 +65,7 @@ export default function Login() {
 
   function postData() {
     axios
-      .post("http://uranus123.herokuapp.com", { email, password })
+      .post("http://uranus123.herokuapp.com/login", { email, password })
       .then((data) => console.log(data))
       .catch((error) => console.log(error));
   }
@@ -76,28 +74,8 @@ export default function Login() {
     <div className="transparent">
       <div className="form-inner">
         <div class="cl-btn-7"></div>
-        <h3>Зарегистрируйтесь с помощью:</h3>
-        <button>
-          <img
-            src={facebook}
-            alt="facebook logo"
-            title="Продолжить через facebook"
-          />
-        </button>
-        <button>
-          <img
-            src={linkedIn}
-            alt="linkedin logo"
-            title="Продолжить через linkedin"
-          />
-        </button>
-        <button>
-          <img
-            src={google}
-            alt="facebook logo"
-            title="Продолжить через facebook"
-          />
-        </button>
+        <h3>Войти с помощью:</h3>
+        <SocialNetworkReg />
         <h3>или</h3>
         {emailVisited && emailError && (
           <div className="errorMessage">{emailError}</div>
@@ -108,7 +86,7 @@ export default function Login() {
           name="email"
           value={email}
           type="text"
-          placeholder="Создать аккаунт с помощью email"
+          placeholder="Войти в аккаунт с помощью email"
           className="email"
         />
         {passwordVisited && passwordError && (
