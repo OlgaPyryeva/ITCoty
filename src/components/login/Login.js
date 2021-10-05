@@ -36,6 +36,7 @@ export default function Login() {
       setEmailError("");
     }
   };
+  // console.log("email", email);
 
   const passwordHandler = (e) => {
     setPassword(e.target.value);
@@ -49,6 +50,7 @@ export default function Login() {
       setPasswordError("");
     }
   };
+  // console.log("password", password);
 
   const blurHandler = (e) => {
     switch (e.target.name) {
@@ -65,13 +67,9 @@ export default function Login() {
 
   function postData() {
     axios
-      .get("http://uranus123.herokuapp.com", { email, password })
-      .then(function (response) {
-        console.log(response);
-      })
-      .catch(function (error) {
-        console.log(error);
-      });
+      .post("http://uranus123.herokuapp.com", { email, password })
+      .then((data) => console.log(data))
+      .catch((error) => console.log(error));
   }
 
   return (
