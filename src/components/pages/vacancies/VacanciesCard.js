@@ -1,11 +1,11 @@
 import React from "react";
-import logo from "../vacancies/img/logo.svg";
+import vacancieCard from "../vacancies/img/vacancieCard.svg";
 
 export default function VacanciesCard() {
   return (
-    <div className="wrapper">
+    <div className="vacanciesWrapper">
       <div className="vacanciesCardContainer">
-        <div className="vacanciesCardLogo">
+        {/* <div className="vacanciesCardLogo">
           <img src={logo} alt={logo} />
         </div>
         <div className="vacanciesCardLeft">
@@ -20,6 +20,33 @@ export default function VacanciesCard() {
           <div>
             <button>Подробнее</button>
           </div>
+        </div> */}
+
+        {/*временно вместо карточек вакансий вставлю картинки*/}
+        <div className="vacanciesCard">
+          <img src={vacancieCard} alt="{vacancieCard}" />
+        </div>
+        <div className="vacanciesCard">
+          <img src={vacancieCard} alt="{vacancieCard}" />
+        </div>
+        <div className="vacanciesCard">
+          <img src={vacancieCard} alt="{vacancieCard}" />
+        </div>
+        <div className="vacanciesCard">
+          <img src={vacancieCard} alt="{vacancieCard}" />
+          <div className="vacanciesCard">
+            <img src={vacancieCard} alt="{vacancieCard}" />
+          </div>
+          <div className="vacanciesCard">
+            <img src={vacancieCard} alt="{vacancieCard}" />
+          </div>
+          <div className="vacanciesCard">
+            <img src={vacancieCard} alt="{vacancieCard}" />
+          </div>
+          <div className="vacanciesCard">
+            <img src={vacancieCard} alt="{vacancieCard}" />
+          </div>
+          {/*временно картинки*/}
         </div>
       </div>
     </div>
