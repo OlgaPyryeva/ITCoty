@@ -9,6 +9,11 @@ export default function Vacancies() {
         <div className="vacanciesTitle">Вакансии</div>
         <div className="vacanciesCard">
           <VacanciesCard />
+          <VacanciesCard />
+          <VacanciesCard />
+          <VacanciesCard />
+          <VacanciesCard />
+          <VacanciesCard />
         </div>
       </div>
     </div>

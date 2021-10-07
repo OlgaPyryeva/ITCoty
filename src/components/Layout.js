@@ -14,7 +14,7 @@ import Home from "./pages/main/Home";
 import Business from "./pages/Business";
 import Events from "./pages/Events";
 import Vacancies from "./pages/vacancies/Vacancies";
-import Traineeship from "./pages/Traineeship";
+import Traineeship from "../components/pages/traineeship/Traineeship";
 
 export default function Layout() {
   return (

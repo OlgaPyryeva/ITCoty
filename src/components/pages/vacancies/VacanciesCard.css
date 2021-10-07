@@ -1,15 +1,17 @@
-.wrapper {
+/* .vacanciesWrapper {
   width: 530px;
   height: 164px;
   background: #f7f7f7;
   border-radius: 12px;
   border: 1px solid white;
-}
+} */
 
 .vacanciesCardContainer {
   display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
 }
-.vacanciesCardLeft {
+/* .vacanciesCardLeft {
   justify-content: left;
 }
 .vacanciesCardRight {
@@ -28,4 +30,4 @@
 .vacanciesCardLogo {
   width: 48px;
   height: 50px;
-}
+} */

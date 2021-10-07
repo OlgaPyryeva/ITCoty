@@ -1,22 +1,22 @@
-.vacanciesContainer {
+.traineeContainer {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.vacanciesBody {
+.traineeBody {
   width: 70%;
   left: 15%;
   height: 1024px;
-  color: #ffffff;
-  background: #4985ff;
+  color: #8d8e8d;
+  background: #e5e5e5;
   border: 1px solid black;
   box-sizing: border-box;
 }
-.vacanciesTitle {
+.traineeTitle {
   font-size: 36px;
   padding: 90px 0 35px 155px;
 }
-.vacanciesCard {
+.traineeCard {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
