@@ -29,14 +29,20 @@
   z-index: 3;
 }
 .slider-control-centerleft button {
+  background: none !important;
   color: rgba(0, 0, 0, 0) !important;
   background-image: url("../carousel/img/leftBtn.svg") !important;
   background-repeat: no-repeat !important;
   background-position: center !important;
 }
 .slider-control-centerright button {
+  background: none !important;
   color: rgba(0, 0, 0, 0) !important;
   background-image: url("../carousel/img/rightBtn.svg") !important;
   background-repeat: no-repeat !important;
   background-position: center !important;
+}
+
+.slider-control-bottomcenter {
+  bottom: 180px !important;
 }
