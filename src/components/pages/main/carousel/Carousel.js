@@ -20,6 +20,9 @@ export default class extends React.Component {
           >
             <Slaide1 />
             <Slaide1 />
+            <Slaide1 />
+            <Slaide1 />
+            <Slaide1 />
           </Carousel>
           <div className="catBtn">
             <button>
