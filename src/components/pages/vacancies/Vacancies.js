@@ -4,8 +4,8 @@ import VacanciesCard from "../vacancies/VacanciesCard";
 
 export default function Vacancies() {
   return (
-    <div className="vacanciesContainer">
-      <div className="vacanciesBody">
+    <div className="vacanciesWrapper">
+      <div className="vacanciesContainer">
         <div className="vacanciesTitle">Вакансии</div>
         <div className="vacanciesCard">
           <VacanciesCard />

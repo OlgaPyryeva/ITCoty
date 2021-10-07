@@ -1,24 +1,24 @@
-.vacanciesWrapper {
+.newsWrapper {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.vacanciesContainer {
+.newsContainer {
   width: 70%;
   left: 15%;
   height: 1024px;
-  color: #ffffff;
-  background: #4985ff;
+  color: #8d8e8d;
+  background: #e5e5e5;
   border: 1px solid black;
   box-sizing: border-box;
 }
-.vacanciesTitle {
+.newsTitle {
   font-size: 36px;
-  padding: 90px 0 35px 155px;
+  padding: 10px 0 10px 155px;
 }
-.vacanciesCard {
+.newsCard {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  margin: 7px 7px 7px 8px;
+  padding: 5px;
 }

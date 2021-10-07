@@ -11,8 +11,9 @@ import Policy from "./docs/Policy";
 import Rules from "./docs/Rules";
 import NavBar from "./pages/main/navbar/NavBar";
 import Home from "./pages/main/Home";
-import Business from "./pages/Business";
-import Events from "./pages/Events";
+import Business from "./pages/business/Business";
+import Events from "./pages/events/Events";
+import News from "./pages/news/News";
 import Vacancies from "./pages/vacancies/Vacancies";
 import Traineeship from "../components/pages/traineeship/Traineeship";
 
@@ -29,6 +30,7 @@ export default function Layout() {
           <Route path="/rules" render={() => <Rules />} />
           <Route path="/business" render={() => <Business />} />
           <Route path="/events" render={() => <Events />} />
+          <Route path="/news" render={() => <News />} />
           <Route path="/vacancies" render={() => <Vacancies />} />
           <Route path="/traineeship" render={() => <Traineeship />} />
         </Switch>

@@ -1,9 +1,9 @@
-.vacanciesWrapper {
+.eventWrapper {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.vacanciesContainer {
+.eventContainer {
   width: 70%;
   left: 15%;
   height: 1024px;
@@ -12,13 +12,7 @@
   border: 1px solid black;
   box-sizing: border-box;
 }
-.vacanciesTitle {
+.eventTitle {
   font-size: 36px;
   padding: 90px 0 35px 155px;
-}
-.vacanciesCard {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  margin: 7px 7px 7px 8px;
 }
