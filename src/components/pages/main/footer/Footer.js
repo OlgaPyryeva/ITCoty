@@ -1,6 +1,7 @@
 import React from "react";
 import footerImg from "./img/footerImg.svg";
 import logoChB from "./img/logoChB.svg";
+import "./Footer.css";
 
 export default function Footer() {
   return (
@@ -9,23 +10,30 @@ export default function Footer() {
         <div className="footerImg">
           <img src={footerImg} alt="{footerImg}" />
         </div>
-        <div className="footer">
-          <div className="footerLogo">
-            <img src={logoChB} alt="{logoChB}" />
+        <div className="footerText">
+          <div className="footerContacts">
+            <div className="footerLogo">
+              <img src={logoChB} alt="{logoChB}" />
+            </div>
+            <div className="fone">+ 375 (29) 333 66 55 </div>
+            <div className="site">it-coty@gmail.com</div>
           </div>
-          <div className="fone">+ 375 (29) 333 66 55 </div>
-          <div className="site">it-coty@gmail.com</div>
-        </div>
-        <div className="footerMap">
-          <ul>
-            <li>Главная</li>
-            <li>Вакансии</li>
-            <li>Стажировки</li>
-            <li>События</li>
-            <li>Новости</li>
-            <li>Документы</li>
-            <li>Бизнесу</li>
-          </ul>
+
+          <div className="footerMap">
+            <ul>
+              <li>Главная</li>
+              <li>Вакансии</li>
+              <li>Стажировки</li>
+            </ul>
+            <ul>
+              <li>События</li>
+              <li>Новости</li>
+            </ul>
+            <ul>
+              <li>Документы</li>
+              <li>Бизнесу</li>
+            </ul>
+          </div>
         </div>
         <div className="footerInfo">
           <div>
