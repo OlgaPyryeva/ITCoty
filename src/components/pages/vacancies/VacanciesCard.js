@@ -23,31 +23,11 @@ export default function VacanciesCard() {
         </div> */}
 
         {/*временно вместо карточек вакансий вставлю картинки*/}
+
         <div className="vacanciesCard">
           <img src={vacancieCard} alt="{vacancieCard}" />
         </div>
-        <div className="vacanciesCard">
-          <img src={vacancieCard} alt="{vacancieCard}" />
-        </div>
-        <div className="vacanciesCard">
-          <img src={vacancieCard} alt="{vacancieCard}" />
-        </div>
-        <div className="vacanciesCard">
-          <img src={vacancieCard} alt="{vacancieCard}" />
-          <div className="vacanciesCard">
-            <img src={vacancieCard} alt="{vacancieCard}" />
-          </div>
-          <div className="vacanciesCard">
-            <img src={vacancieCard} alt="{vacancieCard}" />
-          </div>
-          <div className="vacanciesCard">
-            <img src={vacancieCard} alt="{vacancieCard}" />
-          </div>
-          <div className="vacanciesCard">
-            <img src={vacancieCard} alt="{vacancieCard}" />
-          </div>
-          {/*временно картинки*/}
-        </div>
+        {/*временно картинки*/}
       </div>
     </div>
   );

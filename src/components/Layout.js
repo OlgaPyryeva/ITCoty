@@ -18,18 +18,21 @@ import Traineeship from "./pages/Traineeship";
 
 export default function Layout() {
   return (
-    <BrowserRouter>
-      <Switch>
-        <Route exact path="/" render={() => <Home />} />
-        <Route path="/login" render={() => <Login />} />
-        <Route path="/register" render={() => <Registration />} />
-        <Route path="/policy" render={() => <Policy />} />
-        <Route path="/rules" render={() => <Rules />} />
-        <Route path="/business" render={() => <Business />} />
-        <Route path="/events" render={() => <Events />} />
-        <Route path="/vacancies" render={() => <Vacancies />} />
-        <Route path="/traineeship" render={() => <Traineeship />} />
-      </Switch>
-    </BrowserRouter>
+    <div>
+      <BrowserRouter>
+        <NavBar />
+        <Switch>
+          <Route exact path="/" render={() => <Home />} />
+          <Route path="/login" render={() => <Login />} />
+          <Route path="/register" render={() => <Registration />} />
+          <Route path="/policy" render={() => <Policy />} />
+          <Route path="/rules" render={() => <Rules />} />
+          <Route path="/business" render={() => <Business />} />
+          <Route path="/events" render={() => <Events />} />
+          <Route path="/vacancies" render={() => <Vacancies />} />
+          <Route path="/traineeship" render={() => <Traineeship />} />
+        </Switch>
+      </BrowserRouter>
+    </div>
   );
 }

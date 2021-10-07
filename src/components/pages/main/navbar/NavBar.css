@@ -3,7 +3,7 @@
   padding: 0;
 }
 .header {
-  width: 100%;
+  width: 70%;
   height: 100px;
   font-family: "Raleway", sans-serif;
   border: 2px solid #ccc;
@@ -12,6 +12,9 @@
   justify-content: space-between;
   align-items: center;
   position: fixed;
+  left: 15%;
+  background-color: #fff;
+  z-index: 3;
 }
 
 .logo img {

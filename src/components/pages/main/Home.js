@@ -6,7 +6,6 @@ import NavBar from "./navbar/NavBar";
 export default function Home() {
   return (
     <div>
-      <NavBar />
       <Carousel />
       <Vacancies />
     </div>

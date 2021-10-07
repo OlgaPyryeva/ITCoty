@@ -14,13 +14,13 @@ export default function Slaide1() {
             Краткий текст с описанием преимуществ ресурса, предложение, от
             которого невозможно отказаться{" "}
           </div>
-
           <div className="slaiderBtn">
-            <button>Продолжить</button>
+            <button>Подробнее</button>
           </div>
         </div>
-        <div className="slaiderImg">
-          <img src={imgOne} />
+        <div className="backgroundWrapper">
+          <div className="background"></div>
+          <div className="backgroundTwo"></div>
         </div>
       </div>
     </div>

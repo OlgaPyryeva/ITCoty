@@ -1,7 +1,41 @@
+.carouselContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .carousel {
-  position: absolute;
-  top: 160px;
   width: 70%;
   left: 15%;
-  height: 900px;
+  height: 800px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 150px;
+  z-index: 1;
+  border: 1px solid black;
+}
+.catBtn {
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+  top: 650px;
+  justify-content: space-around;
+  height: 110px;
+  width: 70%;
+  left: 15%;
+  z-index: 3;
+}
+.slider-control-centerleft button {
+  color: rgba(0, 0, 0, 0) !important;
+  background-image: url("../carousel/img/leftBtn.svg") !important;
+  background-repeat: no-repeat !important;
+  background-position: center !important;
+}
+.slider-control-centerright button {
+  color: rgba(0, 0, 0, 0) !important;
+  background-image: url("../carousel/img/rightBtn.svg") !important;
+  background-repeat: no-repeat !important;
+  background-position: center !important;
 }
