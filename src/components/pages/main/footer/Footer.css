@@ -1,0 +1,14 @@
+.footerWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.footerContainer {
+  width: 70%;
+  left: 15%;
+  height: 1024px;
+  color: #8d8e8d;
+  background: #e5e5e5;
+  border: 1px solid black;
+  box-sizing: border-box;
+}
