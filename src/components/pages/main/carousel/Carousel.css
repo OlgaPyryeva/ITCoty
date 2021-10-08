@@ -17,17 +17,7 @@
   border-left: 1px solid #e5e5e5;
   border-right: 1px solid #e5e5e5;
 }
-.catBtn {
-  display: flex;
-  flex-direction: row;
-  position: absolute;
-  top: 650px;
-  justify-content: space-around;
-  height: 110px;
-  width: 70%;
-  left: 15%;
-  z-index: 3;
-}
+
 .slider-control-centerleft button {
   background: none !important;
   font-size: 0 !important;
@@ -44,5 +34,11 @@
 }
 
 .slider-control-bottomcenter {
-  bottom: 180px !important;
+  bottom: 80px !important;
+}
+.paging-item button {
+  background-image: url("../carousel/img/catBtn1.svg") !important;
+  background-repeat: no-repeat !important ;
+  background-position: center !important;
+  padding: 60px !important;
 }
