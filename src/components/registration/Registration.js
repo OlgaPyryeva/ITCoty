@@ -69,10 +69,8 @@ export default function Registration() {
   }
 
   return (
-    <div className="transparent">
-      <div className="form-inner">
-        <div class="cl-btn-7"></div>
-
+    <div className="loginWrapper">
+      <div className="loginContainer">
         <h3>Зарегистрируйтесь с помощью:</h3>
         <SocialNetworkReg />
         <h3>или</h3>

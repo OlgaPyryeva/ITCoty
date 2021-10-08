@@ -71,54 +71,55 @@ export default function Login() {
   }
 
   return (
-    <div className="transparent">
-      <div className="form-inner">
-        <div class="cl-btn-7"></div>
-        <h3>Войти с помощью:</h3>
-        <SocialNetworkReg />
-        <h3>или</h3>
-        {emailVisited && emailError && (
-          <div className="errorMessage">{emailError}</div>
-        )}
-        <input
-          onChange={(e) => emailHandler(e)}
-          onBlur={(e) => blurHandler(e)}
-          name="email"
-          value={email}
-          type="text"
-          placeholder="Войти в аккаунт с помощью email"
-          className="email"
-        />
-        {passwordVisited && passwordError && (
-          <div className="errorMessage">{passwordError}</div>
-        )}
-        <input
-          onChange={(e) => passwordHandler(e)}
-          onBlur={(e) => blurHandler(e)}
-          name="password"
-          value={password}
-          type="text"
-          placeholder="Введите пароль"
-          className="password"
-        />
-        <button onClick={postData} className="btn">
-          Войти
-        </button>
-        <Link to="/register">
-          <button type="submit" className="btn">
-            Зарегистрироваться
+    <div className="loginFone">
+      <div className="loginWrapper">
+        <div className="loginContainer">
+          <h3>Войти с помощью:</h3>
+          <SocialNetworkReg />
+          <h3>или</h3>
+          {emailVisited && emailError && (
+            <div className="errorMessage">{emailError}</div>
+          )}
+          <input
+            onChange={(e) => emailHandler(e)}
+            onBlur={(e) => blurHandler(e)}
+            name="email"
+            value={email}
+            type="text"
+            placeholder="Войти в аккаунт с помощью email"
+            className="email"
+          />
+          {passwordVisited && passwordError && (
+            <div className="errorMessage">{passwordError}</div>
+          )}
+          <input
+            onChange={(e) => passwordHandler(e)}
+            onBlur={(e) => blurHandler(e)}
+            name="password"
+            value={password}
+            type="text"
+            placeholder="Введите пароль"
+            className="password"
+          />
+          <button onClick={postData} className="btn">
+            Войти
           </button>
-        </Link>
+          <Link to="/register">
+            <button type="submit" className="btn">
+              Зарегистрироваться
+            </button>
+          </Link>
 
-        <input type="checkbox" id="custom-checkbox" />
-        <label for="custom-checkbox">Запомнить меня</label>
-        <input type="checkbox" id="policy-checkbox" />
-        <label for="policy-checkbox">
-          Продолжая, вы соглашаетесь с нашей{" "}
-          <Link to="/policy"> политикой конфиденциальности </Link>и
-          <Link to="/rules"> пользовательским соглашением </Link>.
-        </label>
-        <button> Восстановить пароль?</button>
+          <input type="checkbox" id="custom-checkbox" />
+          <label for="custom-checkbox">Запомнить меня</label>
+          <input type="checkbox" id="policy-checkbox" />
+          <label for="policy-checkbox">
+            Продолжая, вы соглашаетесь с нашей{" "}
+            <Link to="/policy"> политикой конфиденциальности </Link>и
+            <Link to="/rules"> пользовательским соглашением </Link>.
+          </label>
+          <button> Восстановить пароль?</button>
+        </div>
       </div>
     </div>
   );
