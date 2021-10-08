@@ -1,33 +1,5 @@
-/* .vacanciesWrapper {
-  width: 530px;
-  height: 164px;
-  background: #f7f7f7;
-  border-radius: 12px;
-  border: 1px solid white;
-} */
-
 .vacanciesCardContainer {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
 }
-/* .vacanciesCardLeft {
-  justify-content: left;
-}
-.vacanciesCardRight {
-  justify-content: right;
-}
-.vacanciesCardRight button {
-  width: 156px;
-  height: 37px;
-  text-align: center;
-  color: #ffffff;
-  border: 1px solid #4985ff;
-  box-sizing: border-box;
-  border-radius: 12px;
-}
-
-.vacanciesCardLogo {
-  width: 48px;
-  height: 50px;
-} */
