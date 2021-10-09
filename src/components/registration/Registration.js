@@ -107,11 +107,11 @@ export default function Registration() {
           placeholder="Подтвердите ранее введенный пароль"
           className="password"
         />
-        <Link to="/register">
-          <button onClick={postData} type="submit" className="btn">
-            Зарегистрироваться
-          </button>
-        </Link>
+        {/* <Link to="/register"> */}
+        <button onClick={postData} type="submit" className="btn">
+          Зарегистрироваться
+        </button>
+        {/* </Link> */}
         <button>Отмена</button>
 
         <input type="checkbox" id="policy-checkbox" />

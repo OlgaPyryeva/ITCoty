@@ -42,3 +42,6 @@
   background-position: center !important;
   padding: 60px !important;
 }
+.paging-dot {
+  display: none;
+}
