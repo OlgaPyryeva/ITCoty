@@ -3,15 +3,13 @@ import logo from "../navbar/img/logo.svg";
 import searchIcon from "../navbar/img/searchIcon.svg";
 import loginIcon from "../navbar/img/loginIcon.svg";
 import langIcon from "../navbar/img/langIcon.svg";
-import Search from "../Search";
 import { Link } from "react-router-dom";
 import "./NavBar.css";
 
 export default function NavBar(props) {
+  const { setPopup, popup } = props;
 
-  const {setPopup, popup} = props
-
-  console.log('popup',popup)
+  console.log("popup", popup);
   return (
     <header class="header">
       <div class="logo">
@@ -43,7 +41,11 @@ export default function NavBar(props) {
           </li>
           <li>
             {/* <Link to="/login"> */}
-              <img src={loginIcon} alt={"loginIcon"}  onClick={()=> setPopup(!popup)}/>
+            <img
+              src={loginIcon}
+              alt={"loginIcon"}
+              onClick={() => setPopup(!popup)}
+            />
             {/* </Link> */}
           </li>
         </ul>
