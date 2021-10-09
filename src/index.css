@@ -11,3 +11,9 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+.paging-dot{
+  display: none;
+}
+.popup{
+  z-index: 9999;
+}

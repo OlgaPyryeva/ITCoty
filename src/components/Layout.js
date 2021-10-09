@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import Login from "./login/Login";
 import {
   BrowserRouter,
@@ -18,12 +18,14 @@ import Vacancies from "./pages/vacancies/Vacancies";
 import Traineeship from "../components/pages/traineeship/Traineeship";
 
 export default function Layout() {
+
+  const [popup, setPopup] = useState(false)
   return (
     <div>
       <BrowserRouter>
-        <NavBar />
+        <NavBar  setPopup={setPopup} popup={popup}/>
         <Switch>
-          <Route exact path="/" render={() => <Home />} />
+          <Route exact path="/" render={() => <Home  popup={popup}/>} />
           <Route path="/login" render={() => <Login />} />
           <Route path="/register" render={() => <Registration />} />
           <Route path="/policy" render={() => <Policy />} />

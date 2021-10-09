@@ -7,7 +7,11 @@ import Search from "../Search";
 import { Link } from "react-router-dom";
 import "./NavBar.css";
 
-export default function NavBar() {
+export default function NavBar(props) {
+
+  const {setPopup, popup} = props
+
+  console.log('popup',popup)
   return (
     <header class="header">
       <div class="logo">
@@ -38,9 +42,9 @@ export default function NavBar() {
             <img src={langIcon} alt={"langIcon"} />
           </li>
           <li>
-            <Link to="/login">
-              <img src={loginIcon} alt={"loginIcon"} />
-            </Link>
+            {/* <Link to="/login"> */}
+              <img src={loginIcon} alt={"loginIcon"}  onClick={()=> setPopup(!popup)}/>
+            {/* </Link> */}
           </li>
         </ul>
       </nav>
