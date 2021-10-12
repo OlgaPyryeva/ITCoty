@@ -5,7 +5,7 @@ import "./News.css";
 export default function News() {
   return (
     <div className="newsWrapper">
-      <div className="newsContainer">
+      <div className="newsContainer container">
         <div className="newsTitle">Последние новости</div>
         <div className="newsCard">
           <NewsCard />

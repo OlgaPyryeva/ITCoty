@@ -4,22 +4,23 @@
   align-items: center;
 }
 .traineeContainer {
-  width: 70%;
-  left: 15%;
+  flex-direction: column;
   height: 1024px;
-  color: #8d8e8d;
-  background: #e5e5e5;
-  /* border: 1px solid black; */
+  color: #4985ff;
+  background: #fff;
   box-sizing: border-box;
+  border-left: 1px solid #e5e5e5;
+  border-right: 1px solid #e5e5e5;
 }
 .traineeTitle {
   font-size: 36px;
-  padding: 90px 0 35px 155px;
+  padding: 90px 0 35px 70px;
 }
 .traineeCard {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  justify-content: space-around;
   overflow: hidden;
   margin: 5px 5px 5px 5px;
 }

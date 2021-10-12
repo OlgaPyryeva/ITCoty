@@ -1,0 +1,67 @@
+.traineeCardContainer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  height: 165px;
+  width: 100%;
+  background: #f7f7f7;
+  border-radius: 12px;
+  padding: 20px;
+  margin: 20px;
+}
+.traineeCardLogo img {
+  padding: 0 5px;
+}
+.traineeCardText {
+  display: flex;
+  flex-direction: column;
+  line-height: 100%;
+  border-radius: 12px;
+  font-weight: 600;
+  font-size: 24px;
+  color: #4985ff;
+}
+.traineeCardTitle {
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 134.09%;
+  color: #4985ff;
+  padding-bottom: 5px;
+}
+.traineeCardBottom {
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 134.09%;
+  color: #4985ff;
+  padding-top: 10px;
+}
+.traineeCardPrice {
+  display: flex;
+  flex-direction: column;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 134.09%;
+  text-align: right;
+  color: #8d8e8d;
+}
+.traineeCardStatus {
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 134.09%;
+  color: #f56462;
+}
+.traineeCardPrice button {
+  width: 155px;
+  height: 35px;
+  background: #ffffff;
+  border: 1px solid #4985ff;
+  box-sizing: border-box;
+  border-radius: 12px;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 134.09%;
+  text-align: center;
+  color: #4985ff;
+  margin-top: 25px;
+  margin-right: 20px;
+}

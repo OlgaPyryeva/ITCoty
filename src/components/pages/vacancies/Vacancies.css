@@ -4,22 +4,35 @@
   align-items: center;
 }
 .vacanciesContainer {
-  width: 70%;
-  left: 15%;
+  flex-direction: column;
   height: 1024px;
   color: #ffffff;
   background: #4985ff;
-  /* border: 1px solid black; */
   box-sizing: border-box;
 }
 .vacanciesTitle {
   font-size: 36px;
-  padding: 90px 0 35px 155px;
+  padding: 90px 0 35px 70px;
 }
 .vacanciesCard {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  justify-content: space-around;
   overflow: hidden;
   margin: 5px 5px 5px 5px;
+}
+.allVacancies {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 220px;
+}
+.allVacancies button {
+  width: 170px;
+  height: 45px;
+  font-weight: 600;
+  font-size: 20px;
+  color: #ffffff;
 }

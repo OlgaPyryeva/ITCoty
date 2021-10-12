@@ -11,11 +11,11 @@ export default function NavBar(props) {
 
   console.log("popup", popup);
   return (
-    <header class="header">
-      <div class="logo">
+    <header class="navBarHeader container">
+      <div class="navBarLogo">
         <img src={logoITCoty} alt={"logoITCoty"} />
       </div>
-      <nav className="menu">
+      <nav className="navBarMenu">
         <ul>
           <li>
             <img src={searchIcon} alt={"searchIcon"} />

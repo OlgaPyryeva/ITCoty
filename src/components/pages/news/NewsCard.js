@@ -1,5 +1,5 @@
 import React from "react";
-import news from "./img/news.svg";
+import news from "../../img/news.svg";
 import "./NewsCard.css";
 
 export default function NewsCard() {

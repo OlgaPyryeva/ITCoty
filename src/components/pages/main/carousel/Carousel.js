@@ -10,8 +10,8 @@ export default class extends React.Component {
 
   render() {
     return (
-      <div className="carouselContainer">
-        <div className="carousel">
+      <div className="carouselWrapper ">
+        <div className="carouselContainer container">
           <Carousel
             slideIndex={this.state.slideIndex}
             afterSlide={(slideIndex) => this.setState({ slideIndex })}

@@ -1,62 +1,55 @@
-* {
-  margin: 0;
-  padding: 0;
-}
-.header {
-  width: 70%;
+.navBarHeader {
   height: 100px;
   font-family: "Raleway", sans-serif;
   border-left: 1px solid #e5e5e5;
   border-top: 1px solid #e5e5e5;
   border-right: 1px solid #e5e5e5;
-  display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
   position: fixed;
   top: 0;
-  left: 15%;
   background-color: #fff;
   z-index: 3;
 }
 
-.logo img {
+.navBarLogo img {
   padding-left: 30px;
 }
 
-.header .menu ul {
+.navBarHeader .navBarMenu ul {
   display: flex;
   list-style: none;
 }
 
-.header .menu ul li {
+.navBarHeader .navBarMenu ul li {
   margin: 20px 20px;
 }
-.header .menu ul li img {
+.navBarHeader .navBarMenuul li img {
   margin: -10px 2px 0 0;
 }
 
-.header .menu ul a {
+.navBarHeader .navBarMenu ul a {
   text-decoration: none;
   font-weight: normal;
   color: #000;
 }
 @media screen and (max-width: 900px) {
-  .menu ul li span {
+  .navBarMenu ul li span {
     margin: auto;
   }
 }
 
 @media screen and (max-width: 500px) {
-  .header {
+  .navBarHeader {
     flex-direction: column;
   }
-  .header .menu ul {
+  .navBarHeader .navBarMenu ul {
     flex-direction: column;
     justify-content: left;
     align-self: center;
   }
-  .header .menu ul li {
+  .navBarHeader .navBarMenu ul li {
     margin: 5px;
   }
 }
