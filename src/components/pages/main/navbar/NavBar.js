@@ -1,8 +1,8 @@
 import React from "react";
-import logo from "../navbar/img/logo.svg";
-import searchIcon from "../navbar/img/searchIcon.svg";
-import loginIcon from "../navbar/img/loginIcon.svg";
-import langIcon from "../navbar/img/langIcon.svg";
+import logoITCoty from "../../../img/logoITCoty.svg";
+import searchIcon from "../../../img/searchIcon.svg";
+import loginIcon from "../../../img/loginIcon.svg";
+import langIcon from "../../../img/langIcon.svg";
 import { Link } from "react-router-dom";
 import "./NavBar.css";
 
@@ -13,7 +13,7 @@ export default function NavBar(props) {
   return (
     <header class="header">
       <div class="logo">
-        <img src={logo} alt={"logo"} />
+        <img src={logoITCoty} alt={"logoITCoty"} />
       </div>
       <nav className="menu">
         <ul>

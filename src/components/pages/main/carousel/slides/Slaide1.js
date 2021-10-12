@@ -1,6 +1,5 @@
 import React from "react";
 import "./Slaide.css";
-import imgOne from "../img/imgOne.svg";
 
 export default function Slaide1() {
   return (

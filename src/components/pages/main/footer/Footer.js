@@ -1,6 +1,6 @@
 import React from "react";
-import footerImg from "./img/footerImg.svg";
-import logoChB from "./img/logoChB.svg";
+import footerImg from "../../../img/footerImg.svg";
+import logoChB from "../../../img/logoChB.svg";
 import "./Footer.css";
 
 export default function Footer() {

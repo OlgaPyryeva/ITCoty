@@ -21,14 +21,14 @@
 .slider-control-centerleft button {
   background: none !important;
   font-size: 0 !important;
-  background-image: url("../carousel/img/leftBtn.svg") !important;
+  background-image: url("../../../img/leftBtn.svg") !important;
   background-repeat: no-repeat !important;
   background-position: center !important;
 }
 .slider-control-centerright button {
   background: none !important;
   font-size: 0 !important;
-  background-image: url("../carousel/img/rightBtn.svg") !important;
+  background-image: url("../../../img/rightBtn.svg") !important;
   background-repeat: no-repeat !important;
   background-position: center !important;
 }
@@ -37,7 +37,7 @@
   bottom: 80px !important;
 }
 .paging-item button {
-  background-image: url("../carousel/img/catBtn1.svg") !important;
+  background-image: url("../../../img/catBtn1.svg") !important;
   background-repeat: no-repeat !important ;
   background-position: center !important;
   padding: 60px !important;
