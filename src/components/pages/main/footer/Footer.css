@@ -4,9 +4,7 @@
   align-items: center;
 }
 .footerContainer {
-  display: flex;
   flex-direction: column;
-  width: 70%;
   height: 600px;
   color: #fff;
   background: #4985ff;
@@ -16,15 +14,14 @@
 }
 .footerImg {
   width: 100%;
-  height: 250px;
-  padding: 20px 50px 20px 50px;
+  height: 200px;
+  padding-left: 10%;
   background-color: #fff;
 }
 .footerText {
   display: flex;
   flex-direction: row;
   height: 170px;
-  border-bottom: 1px solid #ffffff;
 }
 
 .footerContacts {
@@ -51,9 +48,14 @@
 .footerMap li {
   padding: 5px 10px 10px 10px;
 }
-.footerInfo {
+.line {
+  height: 1px;
+  width: 94%;
+  margin-left: 3%;
+  background-color: #fff;
+}
+.footerInfo div {
   width: 100%;
-  height: 100px;
-
-  padding: 20px 50px 10px 50px;
+  height: 50px;
+  padding: 20px 10px 0px 50px;
 }

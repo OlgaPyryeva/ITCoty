@@ -9,6 +9,7 @@
   color: #ffffff;
   background: #4985ff;
   box-sizing: border-box;
+  align-items: center;
 }
 .vacanciesTitle {
   font-size: 36px;
@@ -27,12 +28,9 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  width: 220px;
-}
-.allVacancies button {
-  width: 170px;
-  height: 45px;
+  width: 140px;
   font-weight: 600;
   font-size: 20px;
   color: #ffffff;
+  padding-top: 50px;
 }

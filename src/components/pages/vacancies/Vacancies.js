@@ -17,9 +17,7 @@ export default function Vacancies() {
           <VacanciesCard />
         </div>
         <div className="allVacancies">
-          <div>
-            <button>Все вакансии</button>
-          </div>
+          <div>Все вакансии</div>
           <div>
             <img src={arrowRight} alt="{arrowRight}" />
           </div>

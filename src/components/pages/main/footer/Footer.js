@@ -6,7 +6,7 @@ import "./Footer.css";
 export default function Footer() {
   return (
     <div className="footerWrapper">
-      <div className="footerContainer">
+      <div className="footerContainer container">
         <div className="footerImg">
           <img src={footerImg} alt="{footerImg}" />
         </div>
@@ -35,11 +35,13 @@ export default function Footer() {
             </ul>
           </div>
         </div>
+        <div className="line"></div>
+
         <div className="footerInfo">
           <div>
             ООО «IT Coty» Зарегистрировано Минским горисполкомом 09.07.2020.
             220089 г.Минск, пр-т Дзержинского, 57, 10 этаж, помещение 45-1,
-            комната 2.{" "}
+            комната 2.
           </div>
           <div>
             Режим работы предприятия: пн.-пт. 09.00-18.00, вых. дн. – сб., вс.

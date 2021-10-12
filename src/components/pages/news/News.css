@@ -4,6 +4,7 @@
   align-items: center;
 }
 .newsContainer {
+  flex-direction: column;
   height: 1024px;
   color: #8d8e8d;
   background: #e5e5e5;
@@ -18,5 +19,19 @@
   flex-direction: row;
   flex-wrap: wrap;
   overflow: hidden;
+  justify-content: space-around;
   padding: 5px;
+}
+.allNews {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 140px;
+  font-weight: 600;
+  font-size: 20px;
+  color: #4985ff;
+  padding-top: 20px;
+  margin-left: 45%;
+  margin-bottom: 10px;
 }
