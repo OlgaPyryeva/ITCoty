@@ -1,106 +1,82 @@
-* {
-  box-sizing: border-box;
-}
-
-.loginWrapper {
-  width: 40%;
+.loginContainer {
+  flex-direction: column;
+  height: 650px;
+  width: 468px;
+  background: #ffffff;
+  background-image: url("../img/authorizationImg.svg");
+  box-shadow: 2px 2px 20px #ebebeb;
+  border-radius: 12px;
   position: absolute;
-  top: 120px;
-  left: 30%;
-  background-size: cover;
-  background: rgb(65, 63, 63);
-  border-radius: 15px;
-  z-index: 9999;
+  left: 40%;
+  z-index: 3;
 }
-
-.loginContainer h3 {
-  text-align: center;
-  color: white;
-  font-family: "Raleway", sans-serif;
-  font-weight: 300;
-  font-size: 1.5em;
+.loginTitle {
+  font-size: 24px;
+  font-weight: normal;
+  line-height: 134.09%;
+  color: #8d8e8d;
+  padding: 40px;
 }
-
-.loginContainer label {
-  display: block;
-  padding-left: 15px;
-  font-family: "Raleway", sans-serif;
-  color: rgba(255, 255, 255, 0.6);
-  font-size: 1em;
+.loginEmail,
+.loginPassword {
+  display: flex;
+  flex-direction: column;
+  margin: 5% 10%;
 }
-.loginContainer input,
-button {
-  display: block;
-  position: relative;
-  width: 70%;
-  left: 15%;
-  padding: 0 15px;
-  margin: 5px 0 10px 0;
-  border-width: 0;
-  line-height: 40px;
-  border-radius: 20px;
-  color: rgba(61, 57, 57, 0.897);
-  background: rgba(255, 255, 255, 0.5);
-  font-family: "Raleway", sans-serif;
-  font-size: 18px;
+.loginPassword {
+  margin-top: 0;
 }
-.loginContainer input[type="checkbox"] {
-  position: absolute;
-  opacity: 0;
+.loginEmail input,
+.loginPassword input {
+  height: 30px;
+  border: 0.5px solid #cacaca;
+  box-shadow: 2px 4px 20px #e9e9e9;
+  border-radius: 2px;
 }
-#custom-checkbox + label,
-#policy-checkbox + label {
-  position: relative;
-  margin: 10px 0;
-  text-transform: none;
+.errorMessage {
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 14px;
+  color: #f56462;
+}
+.newPassword {
+  background: transparent;
+  border: 0;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 14px;
+  color: #4985ff;
+  text-align: left;
+}
+.btn {
+  height: 34px;
+  width: 80%;
+  margin-left: 10%;
+  margin-bottom: 5%;
+  background: #4985ff;
+  border: 0.5px solid #cccccc;
+  box-shadow: 2px 4px 6px rgba(79, 79, 79, 0.15);
+  border-radius: 12px;
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 18px;
+  color: #ffffff;
   cursor: pointer;
 }
-#custom-checkbox + label:before,
-#policy-checkbox + label:before {
-  content: "";
-  display: inline-block;
-  width: 20px;
-  height: 20px;
-  margin-right: 10px;
-  vertical-align: text-top;
-  background: white;
+.loginRegText {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 134.09%;
+  color: #707070;
+  text-align: center;
+  padding-top: 10%;
 }
-#custom-checkbox:checked + label:before,
-#policy-checkbox:checked + label:before {
-  background: #1762ee;
-}
-#custom-checkbox:checked + label:after,
-#policy-checkbox:checked + label:after {
-  content: "";
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  left: 20px;
-  top: 9px;
-  background: white;
-  box-shadow: 2px 0 0 white, 4px 0 0 white, 4px -2px 0 white, 4px -4px 0 white,
-    4px -6px 0 white, 4px -8px 0 white;
-  transform: rotate(45deg);
-}
-
-.loginContainer input[type="submit"] {
-  background: #1762ee;
-}
-
-.btn {
-  display: inline;
+.closeBtn {
   position: relative;
-  width: 33%;
-  left: 15%;
-  margin: 0 20px 20px 0;
-  font-size: 1.2em;
-}
-
-.errorMessage {
-  color: red;
-}
-.socialIconBtn {
-  width: 70%;
-  position: relative;
-  left: 15%;
+  left: 90%;
+  margin-top: 5%;
+  cursor: pointer;
+  border: 0;
+  background-color: #fff;
+  /* background: #cacaca; */
 }

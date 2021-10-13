@@ -5,7 +5,6 @@ import { Link } from "react-router-dom";
 import Policy from "../docs/Policy";
 import Rules from "../docs/Rules";
 import SocialNetworkReg from "../socialNetworkReg/SocialNetworkReg";
-import x from "../img/x.svg";
 
 export default function Login() {
   const [email, setEmail] = useState();
@@ -72,54 +71,54 @@ export default function Login() {
   }
 
   return (
-    <div className="loginWrapper">
-      <div className="loginContainer container">
-        <div>
-          <button className="closeBtn">
-            <img src={x} alt="{x}" />
-          </button>
-        </div>
-        <div className="loginTitle">Авторизация </div>
-        <div className="loginEmail">
-          <label>Email</label>
+    <div className="loginFone">
+      <div className="loginWrapper">
+        <div className="loginContainer">
+          <h3>Войти с помощью:</h3>
+          <SocialNetworkReg />
+          <h3>или</h3>
+          {emailVisited && emailError && (
+            <div className="errorMessage">{emailError}</div>
+          )}
           <input
             onChange={(e) => emailHandler(e)}
             onBlur={(e) => blurHandler(e)}
             name="email"
             value={email}
             type="text"
+            placeholder="Войти в аккаунт с помощью email"
             className="email"
           />
-          {emailVisited && emailError && (
-            <div className="errorMessage">{emailError}</div>
+          {passwordVisited && passwordError && (
+            <div className="errorMessage">{passwordError}</div>
           )}
-        </div>
-        <div className="loginPassword">
-          <label>Пароль</label>
           <input
             onChange={(e) => passwordHandler(e)}
             onBlur={(e) => blurHandler(e)}
             name="password"
             value={password}
             type="text"
+            placeholder="Введите пароль"
             className="password"
           />
-          {passwordVisited && passwordError && (
-            <div className="errorMessage">{passwordError}</div>
-          )}
-          <button className="newPassword"> Восстановить пароль?</button>
-        </div>
+          <button onClick={postData} className="btn">
+            Войти
+          </button>
+          <Link to="/register">
+            <button type="submit" className="btn">
+              Зарегистрироваться
+            </button>
+          </Link>
 
-        <button onClick={postData} className="btn">
-          Войти
-        </button>
-        <div>
-          <SocialNetworkReg />
-        </div>
-
-        <div className="loginRegText">
-          Пока не зарегистрированы?
-          <Link to="/register"> Регистрация </Link>
+          <input type="checkbox" id="custom-checkbox" />
+          <label for="custom-checkbox">Запомнить меня</label>
+          <input type="checkbox" id="policy-checkbox" />
+          <label for="policy-checkbox">
+            Продолжая, вы соглашаетесь с нашей{" "}
+            <Link to="/policy"> политикой конфиденциальности </Link>и
+            <Link to="/rules"> пользовательским соглашением </Link>.
+          </label>
+          <button> Восстановить пароль?</button>
         </div>
       </div>
     </div>

@@ -1,0 +1,25 @@
+.socialIconContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.socialIconBtn button {
+  width: 80%;
+  margin-left: 10%;
+  height: 34px;
+  background: #fffdfd;
+  border: 0.5px solid #cccccc;
+  box-shadow: 2px 4px 20px #ebebeb;
+  border-radius: 12px;
+  margin: 5% 5% 0 10%;
+}
+.socialBtn {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.socialBtn div {
+  padding-right: 2%;
+}
