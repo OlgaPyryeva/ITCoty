@@ -42,3 +42,19 @@
 .paging-dot {
   display: none;
 }
+@media screen and (max-width: 500px) {
+  .paging-item button {
+    padding: 20px !important;
+    background-image: url("../../../img/catBtnSmall.svg") !important;
+  }
+  .slaiderTitle {
+    font-size: 12px;
+  }
+  .slaiderSubtitle {
+    font-size: 8px;
+  }
+  ..slaiderBtn button {
+    width: 50%;
+    font-size: 10px;
+  }
+}
