@@ -1,7 +1,7 @@
 .loginContainer {
   flex-direction: column;
   height: 650px;
-  width: 468px;
+  width: 30%;
   background: #ffffff;
   background-image: url("../img/authorizationImg.svg");
   box-shadow: 2px 2px 20px #ebebeb;
@@ -11,11 +11,11 @@
   z-index: 3;
 }
 .loginTitle {
-  font-size: 24px;
+  font-size: 1.5em;
   font-weight: normal;
   line-height: 134.09%;
   color: #8d8e8d;
-  padding: 40px;
+  padding: 10%;
 }
 .loginEmail,
 .loginPassword {
@@ -35,16 +35,16 @@
 }
 .errorMessage {
   font-weight: normal;
-  font-size: 12px;
-  line-height: 14px;
+  font-size: 0.75em;
+  line-height: 0.75em;
   color: #f56462;
 }
 .newPassword {
   background: transparent;
   border: 0;
   font-weight: normal;
-  font-size: 12px;
-  line-height: 14px;
+  font-size: 0.75em;
+  line-height: 0.8em;
   color: #4985ff;
   text-align: left;
 }
@@ -58,14 +58,14 @@
   box-shadow: 2px 4px 6px rgba(79, 79, 79, 0.15);
   border-radius: 12px;
   font-weight: normal;
-  font-size: 15px;
-  line-height: 18px;
+  font-size: 0.9em;
+  line-height: 1.1em;
   color: #ffffff;
   cursor: pointer;
 }
 .loginRegText {
   font-weight: 500;
-  font-size: 12px;
+  font-size: 0.75em;
   line-height: 134.09%;
   color: #707070;
   text-align: center;
@@ -79,4 +79,10 @@
   border: 0;
   background-color: #fff;
   /* background: #cacaca; */
+}
+@media screen and (max-width: 500px) {
+  .loginContainer {
+    width: 90%;
+    left: 5%;
+  }
 }
