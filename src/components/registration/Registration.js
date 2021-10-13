@@ -2,6 +2,8 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
 import SocialNetworkReg from "../socialNetworkReg/SocialNetworkReg";
+import x from "../img/x.svg";
+import "./Registration.css";
 
 export default function Registration() {
   const [email, setEmail] = useState();
@@ -70,57 +72,56 @@ export default function Registration() {
 
   return (
     <div className="loginWrapper">
-      <div className="loginContainer">
-        <h3>Зарегистрируйтесь с помощью:</h3>
-        <SocialNetworkReg />
-        <h3>или</h3>
-        {emailVisited && emailError && (
-          <div className="errorMessage">{emailError}</div>
-        )}
-        <input
-          onChange={(e) => emailHandler(e)}
-          onBlur={(e) => blurHandler(e)}
-          name="email"
-          value={email}
-          type="text"
-          placeholder="Создать аккаунт с помощью email"
-          className="email"
-        />
-        {passwordVisited && passwordError && (
-          <div className="errorMessage">{passwordError}</div>
-        )}
-        <input
-          onChange={(e) => passwordHandler(e)}
-          onBlur={(e) => blurHandler(e)}
-          name="password"
-          value={password}
-          type="text"
-          placeholder="Введите пароль"
-          className="password"
-        />
-        <input
-          onChange={(e) => passwordHandler(e)}
-          onBlur={(e) => blurHandler(e)}
-          name="password"
-          value={password}
-          type="text"
-          placeholder="Подтвердите ранее введенный пароль"
-          className="password"
-        />
-        {/* <Link to="/register"> */}
-        <button onClick={postData} type="submit" className="btn">
-          Зарегистрироваться
+      <div className="loginContainer container">
+        <div>
+          <button className="closeBtn">
+            <img src={x} alt="{x}" />
+          </button>
+        </div>
+        <div className="loginTitle">Регистрация </div>
+        <div>
+          <SocialNetworkReg />
+        </div>
+        <div className="lineContainer">
+          <div className="lineReg"></div>
+          <div className="lineText">или</div>
+          <div className="lineReg"></div>
+        </div>
+        <div className="loginEmail">
+          <label>Email</label>
+          <input
+            onChange={(e) => emailHandler(e)}
+            onBlur={(e) => blurHandler(e)}
+            name="email"
+            value={email}
+            type="text"
+            placeholder="Создать учетную запись с электронной почтой"
+            className="email"
+          />
+          {emailVisited && emailError && (
+            <div className="errorMessage">{emailError}</div>
+          )}
+        </div>
+        <div className="loginPassword">
+          <label>Пароль</label>
+          <input
+            onChange={(e) => passwordHandler(e)}
+            onBlur={(e) => blurHandler(e)}
+            name="password"
+            value={password}
+            type="text"
+            className="password"
+          />
+          {passwordVisited && passwordError && (
+            <div className="errorMessage">{passwordError}</div>
+          )}
+        </div>
+        <button onClick={postData} className="btn">
+          Регистрация
         </button>
-        {/* </Link> */}
-        <button>Отмена</button>
-
-        <input type="checkbox" id="policy-checkbox" />
-        <label for="policy-checkbox">
-          Продолжая, вы соглашаетесь с нашей{" "}
-          <Link to="/policy"> политикой конфиденциальности </Link>и
-          <Link to="/rules"> пользовательским соглашением </Link>.
-        </label>
-        <button> Восстановить пароль?</button>
+        <div className="backToLogin">
+          Уже зарегистрированы? <button>Войти</button>
+        </div>
       </div>
     </div>
   );
