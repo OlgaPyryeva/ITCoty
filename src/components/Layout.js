@@ -19,6 +19,7 @@ import Traineeship from "../components/pages/traineeship/Traineeship";
 
 export default function Layout() {
   const [popup, setPopup] = useState(false);
+  const [popupReg, setPopupReg] = useState(false);
   return (
     <div>
       <BrowserRouter>
@@ -29,7 +30,12 @@ export default function Layout() {
             path="/login"
             render={() => <Login setPopup={setPopup} popup={popup} />}
           />
-          <Route path="/register" render={() => <Registration />} />
+          <Route
+            path="/register"
+            render={() => (
+              <Registration setPopupReg={setPopupReg} popupReg={popupReg} />
+            )}
+          />
           <Route path="/policy" render={() => <Policy />} />
           <Route path="/rules" render={() => <Rules />} />
           <Route path="/business" render={() => <Business />} />

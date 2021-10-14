@@ -5,7 +5,8 @@ import SocialNetworkReg from "../socialNetworkReg/SocialNetworkReg";
 import x from "../img/x.svg";
 import "./Registration.css";
 
-export default function Registration() {
+export default function Registration(props) {
+  const { setPopupReg, popupReg } = props;
   const [email, setEmail] = useState();
   const [password, setPassword] = useState();
   const [checkPassword, setCheckPassword] = useState();

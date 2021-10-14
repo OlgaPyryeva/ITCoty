@@ -9,6 +9,7 @@ import x from "../img/x.svg";
 
 export default function Login(props) {
   const { setPopup, popup } = props;
+  const { setPopupReg, popupReg } = props;
 
   const [email, setEmail] = useState();
   const [password, setPassword] = useState();
@@ -121,7 +122,12 @@ export default function Login(props) {
 
         <div className="loginRegText">
           Пока не зарегистрированы?
-          <Link to="/register"> Регистрация </Link>
+          {/* <Link to="/register"> */}
+          <button onClick={() => setPopupReg(!popupReg)}>
+            {" "}
+            Регистрация
+          </button>{" "}
+          {/* </Link> */}
         </div>
       </div>
     </div>
