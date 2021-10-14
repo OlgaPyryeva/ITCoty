@@ -29,7 +29,7 @@ export default function socialNetworkReg() {
           <button className="socialBtn">
             <div> Продолжить через</div>{" "}
             <div>
-              <img src={google} alt="facebook logo" />
+              <img src={google} alt="google logo" />
             </div>
           </button>
         </div>
