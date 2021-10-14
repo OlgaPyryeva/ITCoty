@@ -10,8 +10,6 @@ import x from "../img/x.svg";
 export default function Login(props) {
   const { setPopup, popup } = props;
 
-  console.log("popup", popup);
-
   const [email, setEmail] = useState();
   const [password, setPassword] = useState();
   const [emailVisited, setEmailVisited] = useState(false);
