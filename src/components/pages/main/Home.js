@@ -11,11 +11,6 @@ export default function Home(props) {
   const { popup, popupReg } = props;
   return (
     <div>
-      {popup && (
-        <div>
-          <Login />
-        </div>
-      )}
       {popupReg && (
         <div>
           <Registration />

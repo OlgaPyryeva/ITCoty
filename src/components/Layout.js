@@ -24,12 +24,9 @@ export default function Layout() {
     <div>
       <BrowserRouter>
         <NavBar setPopup={setPopup} popup={popup} />
+        {popup && <Login setPopup={setPopup} popup={popup} />}
         <Switch>
           <Route exact path="/" render={() => <Home popup={popup} />} />
-          <Route
-            path="/login"
-            render={() => <Login setPopup={setPopup} popup={popup} />}
-          />
           <Route
             path="/register"
             render={() => (
