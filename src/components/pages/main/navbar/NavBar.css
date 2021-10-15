@@ -43,6 +43,7 @@
 @media screen and (max-width: 500px) {
   .navBarHeader {
     flex-direction: column;
+    height: 225px;
   }
   .navBarHeader .navBarMenu ul {
     flex-direction: column;
