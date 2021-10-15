@@ -10,10 +10,7 @@
   align-items: center;
 }
 .newsImg {
-  position: relative;
-  width: 80%;
-  left: 10%;
-  z-index: 3;
+  width: 100%;
 }
 .newsCardTitle {
   font-weight: 600;
