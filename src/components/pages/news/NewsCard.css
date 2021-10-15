@@ -1,6 +1,7 @@
 .newsCardContainer {
   width: 350px;
   height: 395px;
+  overflow: hidden;
 }
 .newsCard {
   display: flex;
@@ -9,12 +10,35 @@
   align-items: center;
 }
 .newsImg {
+  position: relative;
   width: 80%;
   left: 10%;
+  z-index: 3;
 }
 .newsCardTitle {
   font-weight: 600;
-  font-size: 18px;
+  font-size: 1.125em;
   line-height: 134.09%;
   color: #424242;
+}
+.newsCardSubtitle {
+  font-weight: normal;
+  font-size: 0.875em;
+  line-height: 134.09%;
+  color: #424242;
+  margin-top: 10px;
+}
+.newsCardData {
+  font-weight: normal;
+  font-size: 0.75em;
+  line-height: 134.09%;
+  color: #424242;
+  margin-top: 15px;
+}
+
+@media screen and (max-width: 500px) {
+  .newsCardContainer {
+    width: 300px;
+    height: 385px;
+  }
 }

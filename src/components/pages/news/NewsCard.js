@@ -1,6 +1,7 @@
 import React from "react";
-import news1 from "../../img/news1.svg";
+import { Link } from "react-router-dom";
 import "./NewsCard.css";
+import news from "../../img/news.svg";
 
 export default function NewsCard() {
   return (
@@ -8,14 +9,14 @@ export default function NewsCard() {
       <div className="newsCardContainer">
         <div className="newsCard">
           <div className="newsCardImg">
-            <img src={news1} alt="news1" className="newsImg" />
+            <img src={news} alt="news" className="newsImg" />
           </div>
           <div className="newsCardTitle">
             Заголовок новости и еще один заголовок новости
           </div>
           <div className="newsCardSubtitle">
             Текст статьи текст статьи текст статьи текст статьи текст статьи
-            текст статьи... Читать далее
+            текст статьи... <Link to="/news">Читать далее </Link>
           </div>
           <div className="newsCardData">21 сентября 2021</div>
         </div>
