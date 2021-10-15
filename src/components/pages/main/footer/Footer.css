@@ -12,12 +12,15 @@
   border-right: 1px solid #e5e5e5;
   box-sizing: border-box;
 }
-.footerImg {
+.footerImgContainer {
   width: 100%;
   height: 200px;
   padding-left: 10%;
   background-color: #fff;
   overflow: hidden;
+}
+.footerImg {
+  width: 90%;
 }
 .footerText {
   display: flex;
@@ -27,16 +30,22 @@
 
 .footerContacts {
   width: 30%;
-  padding: 45px;
+  padding: 2% 5%;
 }
 .footerLogo {
-  padding: 5px;
+  padding: 0.5%;
 }
 .fone {
   padding: 5px;
+  font-weight: 600;
+  font-size: 1.5em;
+  line-height: 2em;
 }
 .site {
-  padding: 5px;
+  padding: 0.5%;
+  font-weight: 600;
+  font-size: 1.5em;
+  line-height: 1.75em;
 }
 .footerMap {
   width: 70%;
@@ -44,19 +53,45 @@
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  padding: 45px 50px 0 0;
+  padding: 3% 4% 0 0;
+  font-weight: 900;
+  font-size: 1.1em;
+  line-height: 1.3em;
 }
 .footerMap li {
-  padding: 5px 10px 10px 10px;
+  padding: 1% 2% 1% 2%;
+}
+.footerMap ul {
+  padding-top: 1%;
 }
 .line {
   height: 1px;
   width: 94%;
-  margin-left: 3%;
+  margin: 1% 3% 0 3%;
   background-color: #fff;
 }
 .footerInfo div {
   width: 100%;
   height: 50px;
-  padding: 20px 10px 0px 50px;
+  padding: 2% 1% 0px 4%;
+}
+
+@media screen and (max-width: 500px) {
+  .footerText {
+    flex-direction: column;
+  }
+  .footerContacts {
+    width: 100%;
+  }
+  .footerMap {
+    padding-top: 0;
+  }
+  .footerImgContainer {
+    height: 50px;
+  }
+  .footerInfo div {
+    height: 100px;
+    width: 90%;
+    padding: 50% 1% 1% 1%;
+  }
 }

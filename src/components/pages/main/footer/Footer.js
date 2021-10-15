@@ -7,8 +7,8 @@ export default function Footer() {
   return (
     <div className="footerWrapper">
       <div className="footerContainer container">
-        <div className="footerImg">
-          <img src={footerImg} alt="{footerImg}" />
+        <div className="footerImgContainer">
+          <img src={footerImg} alt="{footerImg}" className="footerImg" />
         </div>
         <div className="footerText">
           <div className="footerContacts">
