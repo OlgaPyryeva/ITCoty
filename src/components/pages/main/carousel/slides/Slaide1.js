@@ -1,5 +1,6 @@
 import React from "react";
 import "./Slaide.css";
+import imgOne from "../../../../img/imgOne.svg";
 
 export default function Slaide1() {
   return (
@@ -20,6 +21,9 @@ export default function Slaide1() {
         <div className="backgroundWrapper">
           <div className="background"></div>
           <div className="backgroundTwo"></div>
+          <div className="backgroundImg">
+            <img src={imgOne} alt="img one" />
+          </div>
         </div>
       </div>
     </div>

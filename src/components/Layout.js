@@ -25,14 +25,17 @@ export default function Layout() {
       <BrowserRouter>
         <NavBar setPopup={setPopup} popup={popup} />
         {popup && <Login setPopup={setPopup} popup={popup} />}
+        {popupReg && (
+          <Registration setPopupReg={setPopupReg} popupReg={popupReg} />
+        )}
         <Switch>
           <Route exact path="/" render={() => <Home popup={popup} />} />
-          <Route
+          {/* <Route
             path="/register"
             render={() => (
               <Registration setPopupReg={setPopupReg} popupReg={popupReg} />
             )}
-          />
+          /> */}
           <Route path="/policy" render={() => <Policy />} />
           <Route path="/rules" render={() => <Rules />} />
           <Route path="/business" render={() => <Business />} />

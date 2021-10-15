@@ -123,10 +123,7 @@ export default function Login(props) {
         <div className="loginRegText">
           Пока не зарегистрированы?
           {/* <Link to="/register"> */}
-          <button onClick={() => setPopupReg(!popupReg)}>
-            {" "}
-            Регистрация
-          </button>{" "}
+          <button onClick={() => setPopupReg(!popupReg)}>Регистрация</button>
           {/* </Link> */}
         </div>
       </div>

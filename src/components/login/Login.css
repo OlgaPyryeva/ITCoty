@@ -71,6 +71,11 @@
   text-align: center;
   padding-top: 10%;
 }
+.loginRegText button {
+  border: 0;
+  background-color: #fff;
+  color: #4985ff;
+}
 .closeBtn {
   position: relative;
   left: 90%;
