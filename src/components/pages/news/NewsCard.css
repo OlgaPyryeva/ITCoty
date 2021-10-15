@@ -1,6 +1,20 @@
 .newsCardContainer {
+  width: 350px;
+  height: 395px;
+}
+.newsCard {
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
+}
+.newsImg {
+  width: 80%;
+  left: 10%;
+}
+.newsCardTitle {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 134.09%;
+  color: #424242;
 }

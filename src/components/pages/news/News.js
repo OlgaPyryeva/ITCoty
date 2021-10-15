@@ -10,6 +10,8 @@ export default function News() {
         <div className="newsTitle">Последние новости</div>
         <div className="newsCard">
           <NewsCard />
+          <NewsCard />
+          <NewsCard />
         </div>
         <div className="allNews">
           <div>Все новости</div>
@@ -19,6 +21,8 @@ export default function News() {
         </div>
         <div className="newsTitle">Популярные новости</div>
         <div className="newsCard">
+          <NewsCard />
+          <NewsCard />
           <NewsCard />
         </div>
         <div className="allNews">
