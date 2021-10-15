@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "./NewsCard.css";
-import news from "../../img/news.svg";
+import news from "../../img/news.png";
 
 export default function NewsCard() {
   return (
