@@ -8,8 +8,8 @@ import SocialNetworkReg from "../socialNetworkReg/SocialNetworkReg";
 import x from "../img/x.svg";
 
 export default function Login(props) {
-  const { setPopup, popup } = props;
-  const { setPopupReg, popupReg } = props;
+  const { setPopup, popup, setPopupReg, popupReg } = props;
+  // const { setPopupReg, popupReg } = props;
 
   const [email, setEmail] = useState();
   const [password, setPassword] = useState();

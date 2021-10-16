@@ -24,7 +24,14 @@ export default function Layout() {
     <div>
       <BrowserRouter>
         <NavBar setPopup={setPopup} popup={popup} />
-        {popup && <Login setPopup={setPopup} popup={popup} />}
+        {popup && (
+          <Login
+            setPopup={setPopup}
+            popup={popup}
+            setPopupReg={setPopupReg}
+            popupReg={popupReg}
+          />
+        )}
         {popupReg && (
           <Registration setPopupReg={setPopupReg} popupReg={popupReg} />
         )}

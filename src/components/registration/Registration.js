@@ -75,7 +75,7 @@ export default function Registration(props) {
     <div className="loginWrapper">
       <div className="loginContainer container">
         <div>
-          <button className="closeBtn">
+          <button className="closeBtn" onClick={() => setPopupReg(!popupReg)}>
             <img src={x} alt="{x}" />
           </button>
         </div>
