@@ -20,6 +20,9 @@ code {
 .popup {
   z-index: 9;
 }
+.wrapper {
+  width: 1800px;
+}
 .container {
   width: 80%;
   left: 10%;

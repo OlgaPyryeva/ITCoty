@@ -1,15 +1,13 @@
 import React, { useState, useEffect } from "react";
 import "./Login.css";
 import axios from "axios";
-import { Link } from "react-router-dom";
-import Policy from "../docs/Policy";
-import Rules from "../docs/Rules";
 import SocialNetworkReg from "../socialNetworkReg/SocialNetworkReg";
 import x from "../img/x.svg";
+import eye from "../img/eye.svg";
 
 export default function Login(props) {
   const { setPopup, popup, setPopupReg, popupReg } = props;
-  // const { setPopupReg, popupReg } = props;
+  const [passwordType, setPasswordType] = useState("");
 
   const [email, setEmail] = useState();
   const [password, setPassword] = useState();
@@ -83,48 +81,58 @@ export default function Login(props) {
           </button>
         </div>
         <div className="loginTitle">Авторизация </div>
-        <div className="loginEmail">
-          <label>Email</label>
-          <input
-            onChange={(e) => emailHandler(e)}
-            onBlur={(e) => blurHandler(e)}
-            name="email"
-            value={email}
-            type="text"
-            className="email"
-          />
-          {emailVisited && emailError && (
-            <div className="errorMessage">{emailError}</div>
-          )}
-        </div>
-        <div className="loginPassword">
-          <label>Пароль</label>
-          <input
-            onChange={(e) => passwordHandler(e)}
-            onBlur={(e) => blurHandler(e)}
-            name="password"
-            value={password}
-            type="text"
-            className="password"
-          />
-          {passwordVisited && passwordError && (
-            <div className="errorMessage">{passwordError}</div>
-          )}
-          <button className="newPassword"> Восстановить пароль?</button>
-        </div>
+        <div className="loginForm">
+          <div className="loginEmail">
+            <label>Email</label>
+            <input
+              onChange={(e) => emailHandler(e)}
+              onBlur={(e) => blurHandler(e)}
+              name="email"
+              value={email}
+              type="email"
+              className="email"
+            />
+            {emailVisited && emailError && (
+              <div className="errorMessage">{emailError}</div>
+            )}
+          </div>
+          <div className="loginPassword">
+            <label>Пароль</label>
+            <div className="passwordField">
+              <input
+                onChange={(e) => passwordHandler(e)}
+                onBlur={(e) => blurHandler(e)}
+                type={passwordType ? "text" : "password"}
+                name="password"
+                value={password}
+                className="password"
+              />{" "}
+              <img
+                className="passwordImg"
+                src={eye}
+                alt="eye"
+                onClick={() => setPasswordType((prevState) => !prevState)}
+              />
+            </div>
+            {passwordVisited && passwordError && (
+              <div className="errorMessage">{passwordError}</div>
+            )}
 
-        <button onClick={postData} className="btn">
-          Войти
-        </button>
-        <div>
-          <SocialNetworkReg />
-        </div>
+            <button className="newPassword"> Восстановить пароль?</button>
+          </div>
+          <div>
+            <button onClick={postData} className="btn">
+              Войти
+            </button>
+          </div>
+          <div className="socialBtn">
+            <SocialNetworkReg />
+          </div>
 
-        <div className="loginRegText">
-          Пока не зарегистрированы?
-          {/* <Link to="/register"> */}
-          <button onClick={() => setPopupReg(!popupReg)}>Регистрация</button>
-          {/* </Link> */}
+          <div className="loginRegText">
+            Пока не зарегистрированы?
+            <button onClick={() => setPopupReg(!popupReg)}>Регистрация</button>
+          </div>
         </div>
       </div>
     </div>
