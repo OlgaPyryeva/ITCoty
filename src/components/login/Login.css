@@ -1,8 +1,9 @@
 .loginWrapper {
-  display: flex;
-  justify-content: center;
+  /* display: flex;
+  justify-content: center; */
 }
 .loginContainer {
+  display: flex;
   flex-direction: column;
   height: 650px;
   width: 26%;
@@ -17,9 +18,8 @@
 .loginForm {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
+  /* justify-content: center; */
+  /* align-items: center; */
 }
 .loginTitle {
   font-size: 1.5em;
@@ -32,8 +32,9 @@
 .loginPassword {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  text-align: left;
+  /* align-items: center;
+  text-align: left; */
+  margin-left: 2%;
 }
 .loginEmail label,
 .loginPassword label {
@@ -79,12 +80,12 @@
   line-height: 1em;
   color: #4985ff;
   text-align: left;
-  margin: 2% 1%;
+  margin: 2% 2%;
 }
 .btn {
   height: 34px;
   width: 384px;
-  /* margin: 5% 0 5% 3.5%; */
+  margin: 5% 0 5% 2%;
   background: #4985ff;
   border: 0.5px solid #cccccc;
   box-shadow: 2px 4px 6px rgba(79, 79, 79, 0.15);
@@ -105,7 +106,8 @@
   line-height: 134.09%;
   color: #707070;
   text-align: center;
-  padding-top: 10%;
+
+  padding-top: 50%;
 }
 .loginRegText button {
   border: 0;

@@ -114,12 +114,13 @@ export default function Login(props) {
                 onClick={() => setPasswordType((prevState) => !prevState)}
               />
             </div>
-            {passwordVisited && passwordError && (
-              <div className="errorMessage">{passwordError}</div>
-            )}
-
-            <button className="newPassword"> Восстановить пароль?</button>
           </div>
+          {passwordVisited && passwordError && (
+            <div className="errorMessage">{passwordError}</div>
+          )}
+
+          <button className="newPassword"> Восстановить пароль?</button>
+
           <div>
             <button onClick={postData} className="btn">
               Войти
@@ -128,11 +129,10 @@ export default function Login(props) {
           <div className="socialBtn">
             <SocialNetworkReg />
           </div>
-
-          <div className="loginRegText">
-            Пока не зарегистрированы?
-            <button onClick={() => setPopupReg(!popupReg)}>Регистрация</button>
-          </div>
+        </div>
+        <div className="loginRegText">
+          Пока не зарегистрированы?
+          <button onClick={() => setPopupReg(!popupReg)}>Регистрация</button>
         </div>
       </div>
     </div>
