@@ -21,6 +21,11 @@ export default function Layout() {
   const [popup, setPopup] = useState(false);
   const [popupReg, setPopupReg] = useState(false);
 
+  function toggle() {
+    setPopup = "false";
+    setPopupReg = "true";
+  }
+
   return (
     <div>
       <BrowserRouter>

@@ -6,7 +6,7 @@ import x from "../img/x.svg";
 import eye from "../img/eye.svg";
 
 export default function Login(props) {
-  const { setPopup, popup, setPopupReg, popupReg } = props;
+  const { setPopup, popup, toggle } = props;
   const [passwordType, setPasswordType] = useState("");
 
   const [email, setEmail] = useState();
@@ -132,7 +132,8 @@ export default function Login(props) {
         </div>
         <div className="loginRegText">
           Пока не зарегистрированы?
-          <button onClick={() => setPopupReg(!popupReg)}>Регистрация</button>
+          {/* <button onClick={() => setPopupReg(!popupReg)}>Регистрация</button> */}
+          <button onClick={toggle}>Регистрация</button>
         </div>
       </div>
     </div>
