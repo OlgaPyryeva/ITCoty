@@ -3,10 +3,12 @@ import axios from "axios";
 import { Link } from "react-router-dom";
 import SocialNetworkReg from "../socialNetworkReg/SocialNetworkReg";
 import x from "../img/x.svg";
+import eye from "../img/eye.svg";
 import "./Registration.css";
 
 export default function Registration(props) {
-  const { setPopupReg, popupReg } = props;
+  const { setPopupReg, popupReg, toggle } = props;
+  const [passwordType, setPasswordType] = useState(true);
   const [email, setEmail] = useState();
   const [password, setPassword] = useState();
   const [checkPassword, setCheckPassword] = useState();
@@ -95,7 +97,7 @@ export default function Registration(props) {
             onBlur={(e) => blurHandler(e)}
             name="email"
             value={email}
-            type="text"
+            type="email"
             placeholder="example@mail.com"
             className="email"
           />
@@ -105,14 +107,22 @@ export default function Registration(props) {
         </div>
         <div className="loginPassword">
           <label>Пароль</label>
-          <input
-            onChange={(e) => passwordHandler(e)}
-            onBlur={(e) => blurHandler(e)}
-            name="password"
-            value={password}
-            type="text"
-            className="password"
-          />
+          <div className="passwordField">
+            <input
+              onChange={(e) => passwordHandler(e)}
+              onBlur={(e) => blurHandler(e)}
+              name="password"
+              value={password}
+              type={passwordType ? "text" : "password"}
+              className="password"
+            />
+            <img
+              className="passwordImg"
+              src={eye}
+              alt="eye"
+              onClick={() => setPasswordType((prevState) => !prevState)}
+            />
+          </div>
           {passwordVisited && passwordError && (
             <div className="errorMessage">{passwordError}</div>
           )}
@@ -121,7 +131,7 @@ export default function Registration(props) {
           Регистрация
         </button>
         <div className="backToLogin">
-          Уже зарегистрированы? <button>Войти</button>
+          Уже зарегистрированы? <button onClick={toggle}>Войти</button>
         </div>
       </div>
     </div>

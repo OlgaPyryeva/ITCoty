@@ -4,10 +4,11 @@ import axios from "axios";
 import SocialNetworkReg from "../socialNetworkReg/SocialNetworkReg";
 import x from "../img/x.svg";
 import eye from "../img/eye.svg";
+import eyeNo from "../img/eyeNo.svg";
 
 export default function Login(props) {
   const { setPopup, popup, toggle } = props;
-  const [passwordType, setPasswordType] = useState("");
+  const [passwordType, setPasswordType] = useState(true);
 
   const [email, setEmail] = useState();
   const [password, setPassword] = useState();
@@ -113,6 +114,14 @@ export default function Login(props) {
                 alt="eye"
                 onClick={() => setPasswordType((prevState) => !prevState)}
               />
+              (passwordType = "password"(
+              <img
+                className="passwordImg"
+                src={eyeNo}
+                alt="eyeNo"
+                onClick={() => setPasswordType((prevState) => !prevState)}
+              />
+              )) }
             </div>
           </div>
           {passwordVisited && passwordError && (

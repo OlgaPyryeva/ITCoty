@@ -22,8 +22,10 @@ export default function Layout() {
   const [popupReg, setPopupReg] = useState(false);
 
   function toggle() {
-    setPopup(false);
-    setPopupReg(true);
+    // setPopup(false);
+    // setPopupReg(true);
+    setPopupReg(!popupReg);
+    setPopup(!popup);
   }
 
   return (
@@ -40,7 +42,11 @@ export default function Layout() {
           />
         )}
         {popupReg && (
-          <Registration setPopupReg={setPopupReg} popupReg={popupReg} />
+          <Registration
+            setPopupReg={setPopupReg}
+            popupReg={popupReg}
+            toggle={toggle}
+          />
         )}
         <Switch>
           <Route exact path="/" render={() => <Home popup={popup} />} />
