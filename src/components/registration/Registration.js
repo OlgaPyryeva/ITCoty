@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
+import Policy from "../docs/Policy";
+import Rules from "../docs/Rules";
 import SocialNetworkReg from "../socialNetworkReg/SocialNetworkReg";
 import x from "../img/x.svg";
 import eye from "../img/eye.svg";
@@ -19,6 +21,7 @@ export default function Registration(props) {
     "пароль не может быть пустым"
   );
   const [formValid, setFormValid] = useState(false);
+  const [check, setCheck] = useState(false);
 
   useEffect(() => {
     if (emailError && passwordError) {
@@ -127,7 +130,18 @@ export default function Registration(props) {
             <div className="errorMessage">{passwordError}</div>
           )}
         </div>
-        <button onClick={postData} className="btn">
+        <div className="CheckboxRegBtn">
+          <input
+            type="checkbox"
+            checked={check}
+            onChange={() => setCheck(!check)}
+          />
+          <label>
+            Я согласен с <Link to="/policy">политикой конфиденциальности</Link>{" "}
+            и <Link to="/rules">пользовательским соглашением</Link>
+          </label>
+        </div>
+        <button onClick={postData} className="regBtn">
           Регистрация
         </button>
         <div className="backToLogin">

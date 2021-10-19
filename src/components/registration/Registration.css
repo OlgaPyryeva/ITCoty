@@ -33,3 +33,28 @@
 .regSocialIcons {
   margin-left: 2%;
 }
+.CheckboxRegBtn {
+  margin-top: 10%;
+  margin-left: 2%;
+}
+.CheckboxRegBtn label {
+  font-weight: 500;
+  font-size: 0.75em;
+  line-height: 134.09%;
+  color: #707070;
+  margin-top: 10%;
+}
+.regBtn {
+  height: 34px;
+  width: 384px;
+  margin: 2% 0 5% 2%;
+  background: #4985ff;
+  border: 0.5px solid #cccccc;
+  box-shadow: 2px 4px 6px rgba(79, 79, 79, 0.15);
+  border-radius: 12px;
+  font-weight: normal;
+  font-size: 0.9em;
+  line-height: 1.1em;
+  color: #ffffff;
+  cursor: pointer;
+}
