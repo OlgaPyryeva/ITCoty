@@ -6,6 +6,7 @@ import Rules from "../docs/Rules";
 import SocialNetworkReg from "../socialNetworkReg/SocialNetworkReg";
 import x from "../img/x.svg";
 import eye from "../img/eye.svg";
+import eyeNo from "../img/eyeNo.svg";
 import "./Registration.css";
 
 export default function Registration(props) {
@@ -121,7 +122,7 @@ export default function Registration(props) {
             />
             <img
               className="passwordImg"
-              src={eye}
+              src={passwordType ? { eye } : { eyeNo }}
               alt="eye"
               onClick={() => setPasswordType((prevState) => !prevState)}
             />
@@ -141,7 +142,7 @@ export default function Registration(props) {
             и <Link to="/rules">пользовательским соглашением</Link>
           </label>
         </div>
-        <button onClick={postData} className="regBtn">
+        <button onClick={postData} className="regBtn" disabled={true}>
           Регистрация
         </button>
         <div className="backToLogin">
