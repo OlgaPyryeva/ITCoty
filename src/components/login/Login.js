@@ -19,6 +19,12 @@ export default function Login(props) {
     "пароль не может быть пустым"
   );
   const [formValid, setFormValid] = useState(false);
+  const [imgPsw, setImgPsw] = useState();
+
+  function toggleImg() {
+    setImgPsw((imgPsw) => !imgPsw);
+    setPasswordType((prevState) => !prevState);
+  }
 
   useEffect(() => {
     if (emailError && passwordError) {
@@ -110,18 +116,10 @@ export default function Login(props) {
               />
               <img
                 className="passwordImg"
-                src={eye}
+                src={imgPsw ? { eye } : { eyeNo }}
                 alt="eye"
-                onClick={() => setPasswordType((prevState) => !prevState)}
+                onClick={toggleImg}
               />
-              (passwordType = "password"(
-              <img
-                className="passwordImg"
-                src={eyeNo}
-                alt="eyeNo"
-                onClick={() => setPasswordType((prevState) => !prevState)}
-              />
-              )) }
             </div>
           </div>
           {passwordVisited && passwordError && (
