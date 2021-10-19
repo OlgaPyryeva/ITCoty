@@ -117,15 +117,24 @@ export default function Registration(props) {
               onBlur={(e) => blurHandler(e)}
               name="password"
               value={password}
-              type={passwordType ? "text" : "password"}
+              type={passwordType ? "password" : "text"}
               className="password"
             />
-            <img
-              className="passwordImg"
-              src={passwordType ? { eye } : { eyeNo }}
-              alt="eye"
-              onClick={() => setPasswordType((prevState) => !prevState)}
-            />
+            {passwordType ? (
+              <img
+                className="passwordImg"
+                src={eyeNo}
+                alt="eyeNo"
+                onClick={() => setPasswordType(!passwordType)}
+              />
+            ) : (
+              <img
+                className="passwordImg"
+                src={eye}
+                alt="eye"
+                onClick={() => setPasswordType(!passwordType)}
+              />
+            )}
           </div>
           {passwordVisited && passwordError && (
             <div className="errorMessage">{passwordError}</div>

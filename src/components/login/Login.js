@@ -103,7 +103,7 @@ export default function Login(props) {
               <input
                 onChange={(e) => passwordHandler(e)}
                 onBlur={(e) => blurHandler(e)}
-                type={passwordType ? "text" : "password"}
+                type={passwordType ? "password" : "text"}
                 name="password"
                 value={password}
                 className="password"
@@ -112,16 +112,16 @@ export default function Login(props) {
               {passwordType ? (
                 <img
                   className="passwordImg"
-                  src={eye}
-                  alt="eye"
-                  onClick={setPasswordType(!passwordType)}
+                  src={eyeNo}
+                  alt="eyeNo"
+                  onClick={() => setPasswordType(!passwordType)}
                 />
               ) : (
                 <img
                   className="passwordImg"
-                  src={eyeNo}
-                  alt="eyeNo"
-                  onClick={setPasswordType(!passwordType)}
+                  src={eye}
+                  alt="eye"
+                  onClick={() => setPasswordType(!passwordType)}
                 />
               )}
             </div>
