@@ -40,8 +40,7 @@ export default function Login(props) {
 
   const passwordHandler = (e) => {
     setPassword(e.target.value);
-    const pas =
-      /(?=.*[0-9])(?=.*[a-zA-Z! # $ % & ' * + - / = ? ^ _ ` { | } ~]){7,}/;
+    const pas = /(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])[0-9a-zA-Z!@#$%^&*]{7,}/;
     if (!pas.test(String(e.target.value).toLowerCase())) {
       setPasswordError(
         "Пароль должен содержать буквы(a-z) и цифры и быть длинной не менее 7 символов"
@@ -106,7 +105,7 @@ export default function Login(props) {
                 name="password"
                 value={password}
                 className="password"
-              />{" "}
+              />
               <img
                 className="passwordImg"
                 src={eye}

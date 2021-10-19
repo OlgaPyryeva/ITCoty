@@ -80,7 +80,7 @@ export default function Registration(props) {
           </button>
         </div>
         <div className="loginTitle">Регистрация </div>
-        <div>
+        <div className="regSocialIcons">
           <SocialNetworkReg />
         </div>
         <div className="lineContainer">
@@ -96,7 +96,7 @@ export default function Registration(props) {
             name="email"
             value={email}
             type="text"
-            placeholder="Создать учетную запись с электронной почтой"
+            placeholder="example@mail.com"
             className="email"
           />
           {emailVisited && emailError && (

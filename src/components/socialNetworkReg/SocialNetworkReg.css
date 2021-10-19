@@ -1,8 +1,6 @@
 .socialIconContainer {
   display: flex;
   flex-direction: column;
-  margin-top: 40%;
-  margin-left: 2%;
 }
 
 .socialIconBtn button {
@@ -23,4 +21,10 @@
 }
 .socialBtn div {
   padding-right: 2%;
+}
+@media screen and (max-width: 500px) {
+  .socialIconBtn button {
+    width: 90%;
+    left: 5%;
+  }
 }

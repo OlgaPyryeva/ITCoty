@@ -22,8 +22,8 @@ export default function Layout() {
   const [popupReg, setPopupReg] = useState(false);
 
   function toggle() {
-    setPopup = "false";
-    setPopupReg = "true";
+    setPopup(false);
+    setPopupReg(true);
   }
 
   return (
@@ -36,6 +36,7 @@ export default function Layout() {
             popup={popup}
             setPopupReg={setPopupReg}
             popupReg={popupReg}
+            toggle={toggle}
           />
         )}
         {popupReg && (
