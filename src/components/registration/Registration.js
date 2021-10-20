@@ -35,7 +35,7 @@ export default function Registration(props) {
 
   // если нет ошибок почты и пароля и стоит галочка в чек боксе о согласии с политикой и правилами, то кнопка Регистрация активна
   useEffect(() => {
-    if (emailError && passwordError && !check) {
+    if (emailError || passwordError || !check) {
       setFormValid(false);
     } else {
       setFormValid(true);
@@ -56,8 +56,11 @@ export default function Registration(props) {
   const passwordHandler = (e) => {
     setPassword(e.target.value);
     const pas =
-      /(?=.*[0-9])(?=.*[a-zA-Z! # $ % & ' * + - / = ? ^ _ ` { | } ~]){7,}/;
-    if (!pas.test(String(e.target.value).toLowerCase())) {
+      /(?=.*[0-9])(?=.*[a-zA-Z! # $ % & ' * + - / = ? ^ _ ` { | } ~])/;
+    if (
+      e.target.value.length < 7 ||
+      !pas.test(String(e.target.value).toLowerCase())
+    ) {
       setPasswordError(
         "Пароль должен содержать буквы(a-z) и цифры и быть длинной не менее 7 символов"
       );

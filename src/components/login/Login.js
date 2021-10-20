@@ -45,7 +45,7 @@ export default function Login(props) {
     const pas =
       /(?=.*[0-9])(?=.*[a-zA-Z! # $ % & ' * + - / = ? ^ _ ` { | } ~])/;
     if (
-      e.target.value.length < 7 &&
+      e.target.value.length < 7 ||
       !pas.test(String(e.target.value).toLowerCase())
     ) {
       setPasswordError(
