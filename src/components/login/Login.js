@@ -18,16 +18,16 @@ export default function Login(props) {
   const [passwordError, setPasswordError] = useState(
     "пароль не может быть пустым"
   );
-  const [formValid, setFormValid] = useState(false);
+  // const [formValid, setFormValid] = useState(false);
 
   //если нет ошибок то кнопка "Войти" активна
-  useEffect(() => {
-    if (emailError && passwordError) {
-      setFormValid(false);
-    } else {
-      setFormValid(true);
-    }
-  }, [emailError, passwordError]);
+  // useEffect(() => {
+  //   if (emailError && passwordError) {
+  //     setFormValid(false);
+  //   } else {
+  //     setFormValid(true);
+  //   }
+  // }, [emailError, passwordError]);
 
   const emailHandler = (e) => {
     setEmail(e.target.value);

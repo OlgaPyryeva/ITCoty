@@ -33,13 +33,14 @@ export default function Registration(props) {
   const [formValid, setFormValid] = useState(false);
   const [check, setCheck] = useState(false);
 
-  // useEffect(() => {
-  //   if (emailError && passwordError) {
-  //     setFormValid(false);
-  //   } else {
-  //     setFormValid(true);
-  //   }
-  // }, [emailError, passwordError]);
+  // если нет ошибок почты и пароля и стоит галочка в чек боксе о согласии с политикой и правилами, то кнопка Регистрация активна
+  useEffect(() => {
+    if (emailError && passwordError && !check) {
+      setFormValid(false);
+    } else {
+      setFormValid(true);
+    }
+  }, [emailError, passwordError, check]);
 
   const emailHandler = (e) => {
     setEmail(e.target.value);
@@ -172,7 +173,7 @@ export default function Registration(props) {
             </button>
           </label>
         </div>
-        <button onClick={postData} className="regBtn" disabled={true}>
+        <button onClick={postData} className="regBtn" disabled={!formValid}>
           Регистрация
         </button>
         <div className="backToLogin">

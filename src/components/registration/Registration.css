@@ -64,3 +64,10 @@
   color: #4985ff;
   margin: 0 1% 0 1%;
 }
+.regBtn:hover {
+  background-color: #00aacc;
+}
+
+button:disabled {
+  background-color: #999999;
+}
