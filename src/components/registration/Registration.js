@@ -10,7 +10,16 @@ import eyeNo from "../img/eyeNo.svg";
 import "./Registration.css";
 
 export default function Registration(props) {
-  const { setPopupReg, popupReg, toggle } = props;
+  const {
+    setPopupReg,
+    popupReg,
+    toggle,
+    popupPolicy,
+    setPopupPolicy,
+    popupRules,
+    setPopupRules,
+  } = props;
+
   const [passwordType, setPasswordType] = useState(true);
   const [email, setEmail] = useState();
   const [password, setPassword] = useState();
@@ -24,13 +33,13 @@ export default function Registration(props) {
   const [formValid, setFormValid] = useState(false);
   const [check, setCheck] = useState(false);
 
-  useEffect(() => {
-    if (emailError && passwordError) {
-      setFormValid(false);
-    } else {
-      setFormValid(true);
-    }
-  }, [emailError, passwordError]);
+  // useEffect(() => {
+  //   if (emailError && passwordError) {
+  //     setFormValid(false);
+  //   } else {
+  //     setFormValid(true);
+  //   }
+  // }, [emailError, passwordError]);
 
   const emailHandler = (e) => {
     setEmail(e.target.value);
@@ -147,8 +156,20 @@ export default function Registration(props) {
             onChange={() => setCheck(!check)}
           />
           <label>
-            Я согласен с <Link to="/policy">политикой конфиденциальности</Link>{" "}
-            и <Link to="/rules">пользовательским соглашением</Link>
+            Я согласен с
+            <button
+              className="docsBtn"
+              onClick={() => setPopupPolicy(!popupPolicy)}
+            >
+              политикой конфиденциальности
+            </button>
+            и{" "}
+            <button
+              className="docsBtn"
+              onClick={() => setPopupRules(!popupRules)}
+            >
+              пользовательским соглашением
+            </button>
           </label>
         </div>
         <button onClick={postData} className="regBtn" disabled={true}>

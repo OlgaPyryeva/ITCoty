@@ -58,3 +58,9 @@
   color: #ffffff;
   cursor: pointer;
 }
+.docsBtn {
+  border: 0;
+  background-color: #fff;
+  color: #4985ff;
+  margin: 0 1% 0 1%;
+}

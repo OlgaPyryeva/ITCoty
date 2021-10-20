@@ -20,6 +20,7 @@ export default function Login(props) {
   );
   const [formValid, setFormValid] = useState(false);
 
+  //если нет ошибок то кнопка "Войти" активна
   useEffect(() => {
     if (emailError && passwordError) {
       setFormValid(false);
@@ -42,8 +43,11 @@ export default function Login(props) {
   const passwordHandler = (e) => {
     setPassword(e.target.value);
     const pas =
-      /(?=.*[0-9])(?=.*[a-zA-Z! # $ % & ' * + - / = ? ^ _ ` { | } ~]){7,}/;
-    if (!pas.test(String(e.target.value).toLowerCase())) {
+      /(?=.*[0-9])(?=.*[a-zA-Z! # $ % & ' * + - / = ? ^ _ ` { | } ~])/;
+    if (
+      e.target.value.length < 7 &&
+      !pas.test(String(e.target.value).toLowerCase())
+    ) {
       setPasswordError(
         "Пароль должен содержать буквы(a-z) и цифры и быть длинной не менее 7 символов"
       );

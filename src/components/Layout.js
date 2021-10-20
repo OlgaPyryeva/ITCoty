@@ -20,6 +20,8 @@ import Traineeship from "../components/pages/traineeship/Traineeship";
 export default function Layout() {
   const [popup, setPopup] = useState(false);
   const [popupReg, setPopupReg] = useState(false);
+  const [popupPolicy, setPopupPolicy] = useState(false);
+  const [popupRules, setPopupRules] = useState(false);
 
   function toggle() {
     // setPopup(false);
@@ -46,12 +48,23 @@ export default function Layout() {
             setPopupReg={setPopupReg}
             popupReg={popupReg}
             toggle={toggle}
+            popupPolicy={popupPolicy}
+            setPopupPolicy={setPopupPolicy}
+            popupRules={popupRules}
+            setPopupRules={setPopupRules}
           />
         )}
+        {popupPolicy && (
+          <Policy popupPolicy={popupPolicy} setPopupPolicy={setPopupPolicy} />
+        )}
+        {popupRules && (
+          <Rules popupRules={popupRules} setPopupRules={setPopupRules} />
+        )}
+
         <Switch>
           <Route exact path="/" render={() => <Home popup={popup} />} />
-          <Route path="/policy" render={() => <Policy />} />
-          <Route path="/rules" render={() => <Rules />} />
+
+          {/* <Route path="/rules" render={() => <Rules />} /> */}
           <Route path="/business" render={() => <Business />} />
           <Route path="/events" render={() => <Events />} />
           <Route path="/news" render={() => <News />} />

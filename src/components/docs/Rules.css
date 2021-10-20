@@ -1,0 +1,21 @@
+.rulesContainer {
+  display: flex;
+  flex-direction: column;
+  height: 650px;
+  width: 26%;
+  background: #ffffff;
+  background-image: url("../img/authorizationImg.svg");
+  box-shadow: 2px 2px 20px #ebebeb;
+  border-radius: 12px;
+  position: absolute;
+  left: 37%;
+  z-index: 3;
+}
+.rulesTitle {
+  font-size: 1em;
+  margin: 2%;
+}
+.rulesText {
+  font-size: 0.75em;
+  margin: 2%;
+}
