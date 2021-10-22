@@ -8,13 +8,12 @@
   justify-content: space-between;
   align-items: center;
   margin-top: 0;
-  margin-left: 10%;
   background-color: #fff;
   z-index: 3;
 }
 
 .navBarLogo img {
-  padding-left: 30px;
+  padding-left: 5.6%;
 }
 
 .navBarHeader .navBarMenu ul {
