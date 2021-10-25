@@ -1,6 +1,7 @@
 import React from "react";
 import footerImg from "../../../img/footerImg.svg";
 import logoChB from "../../../img/logoChB.svg";
+import footerImgMob from "../../../imgMobile/footerImgMob.png";
 import "./Footer.css";
 
 export default function Footer() {
@@ -54,6 +55,16 @@ export default function Footer() {
           </div>
         </div>
       </div>
+
+ <div className="mobFooterNav">
+   <img src={footerImgMob} alt="{footerImgMob}" />
+          <ul className="mobFooterNavUl">
+            <li>Локация</li>
+            <li>Дата публикации</li>
+            <li>Квалификация</li>
+          </ul>
+        </div>
+
     </div>
   );
 }

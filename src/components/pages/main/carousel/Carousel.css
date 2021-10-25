@@ -53,8 +53,9 @@
   .slaiderSubtitle {
     font-size: 8px;
   }
-  ..slaiderBtn button {
+  .slaiderBtn button {
     width: 50%;
     font-size: 10px;
   }
 }
+

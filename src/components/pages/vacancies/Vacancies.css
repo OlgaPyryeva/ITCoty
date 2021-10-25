@@ -1,3 +1,4 @@
+
 .vacanciesWrapper {
   display: flex;
   justify-content: center;
@@ -34,8 +35,43 @@
   color: #ffffff;
   padding-top: 50px;
 }
-@media screen and (max-width: 500px) {
+
+/* old version */
+/* @media screen and (max-width: 500px) {
   .vacanciesTitle {
     padding-left: 5px;
   }
+} */
+
+@media (max-width: 500px) {
+
+  .vacanciesWrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .vacanciesContainer {
+    background: none;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    color: #ffffff;
+    align-items: center;
+  }
+
+  .vacanciesCard {
+
+    width: 100%;
+    display: flex;
+    overflow: hidden;
+    margin: 5px 5px 5px 5px;
+    flex-direction: column;
+  }
+
+  .vacanciesTitle {
+    display: none;
+  }
+
 }

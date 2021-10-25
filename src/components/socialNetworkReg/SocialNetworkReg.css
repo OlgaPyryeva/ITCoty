@@ -22,7 +22,7 @@
 .socialBtn div {
   padding-right: 2%;
 }
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 375px) {
   .socialIconBtn button {
     width: 90%;
     left: 5%;

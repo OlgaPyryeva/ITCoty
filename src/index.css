@@ -10,6 +10,8 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+
 }
 
 code {
@@ -29,3 +31,25 @@ code {
   display: flex;
   font-family: "Raleway", sans-serif;
 }
+
+@media (max-width: 500px) {
+  body {
+    min-width: 100%;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  .carouselWrapper,
+  .traineeCardContainer,
+  .carouselWrapper,
+  .newsWrapper,
+
+  .traineeContainer  {
+    display: none!important;
+  }
+
+
+}
+

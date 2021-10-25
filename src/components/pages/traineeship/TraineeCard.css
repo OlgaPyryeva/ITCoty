@@ -65,8 +65,3 @@
   margin-top: 25px;
   margin-right: 20px;
 }
-@media screen and (max-width: 500px) {
-  .traineeCardContainer {
-    height: 385px;
-  }
-}
