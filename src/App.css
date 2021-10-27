@@ -11,4 +11,6 @@
 body {
   width: 1440px;
   font-family: "Raleway", sans-serif;
+  display: flex;
+  justify-content: center;
 }

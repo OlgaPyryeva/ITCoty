@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Login from "./login/Login";
 import {
   BrowserRouter,
@@ -16,16 +16,22 @@ import Events from "./pages/events/Events";
 import News from "./pages/news/News";
 import Vacancies from "./pages/vacancies/Vacancies";
 import Traineeship from "../components/pages/traineeship/Traineeship";
+import { useSelector, useDispatch } from "react-redux";
+import { auth } from "./actions/user";
 
 export default function Layout() {
   const [popup, setPopup] = useState(false);
   const [popupReg, setPopupReg] = useState(false);
   const [popupPolicy, setPopupPolicy] = useState(false);
   const [popupRules, setPopupRules] = useState(false);
+  const isAuth = useSelector((state) => state.user.isAuth);
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(auth());
+  }, []);
 
   function toggle() {
-    // setPopup(false);
-    // setPopupReg(true);
     setPopupReg(!popupReg);
     setPopup(!popup);
   }
@@ -34,7 +40,7 @@ export default function Layout() {
     <div>
       <BrowserRouter>
         <NavBar setPopup={setPopup} popup={popup} />
-        {popup && (
+        {popup && !isAuth && (
           <Login
             setPopup={setPopup}
             popup={popup}
@@ -43,7 +49,8 @@ export default function Layout() {
             toggle={toggle}
           />
         )}
-        {popupReg && (
+
+        {popupReg && !isAuth && (
           <Registration
             setPopupReg={setPopupReg}
             popupReg={popupReg}
@@ -60,7 +67,6 @@ export default function Layout() {
         {popupRules && (
           <Rules popupRules={popupRules} setPopupRules={setPopupRules} />
         )}
-
         <Switch>
           <Route exact path="/" render={() => <Home popup={popup} />} />
 

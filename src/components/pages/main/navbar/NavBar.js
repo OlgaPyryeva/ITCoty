@@ -3,11 +3,16 @@ import logoITCoty from "../../../img/logoITCoty.svg";
 import searchIcon from "../../../img/searchIcon.svg";
 import loginIcon from "../../../img/loginIcon.svg";
 import langIcon from "../../../img/langIcon.svg";
+import x from "../../../img/x.svg";
 import { Link } from "react-router-dom";
 import "./NavBar.css";
+import { useSelector, useDispatch } from "react-redux";
+import { logout } from "../../../../reducers/userReducer";
 
 export default function NavBar(props) {
   const { setPopup, popup } = props;
+  const isAuth = useSelector((state) => state.user.isAuth);
+  const dispatch = useDispatch();
 
   console.log("popup", popup);
   return (
@@ -39,15 +44,20 @@ export default function NavBar(props) {
             <span>RU</span>
             <img src={langIcon} alt={"langIcon"} />
           </li>
-          <li>
-            {/* <Link to="/login"> */}
-            <img
-              src={loginIcon}
-              alt={"loginIcon"}
-              onClick={() => setPopup(!popup)}
-            />
-            {/* </Link> */}
-          </li>
+          {!isAuth && (
+            <li>
+              <img
+                src={loginIcon}
+                alt={"loginIcon"}
+                onClick={() => setPopup(!popup)}
+              />
+            </li>
+          )}
+          {isAuth && (
+            <li>
+              <img src={x} alt={"выход"} onClick={() => dispatch(logout())} />
+            </li>
+          )}
         </ul>
       </nav>
     </header>
