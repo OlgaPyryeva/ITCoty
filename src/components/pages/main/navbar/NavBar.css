@@ -63,6 +63,8 @@
   }
 } */
 
+
+/* Mobile version style */
 @media screen and (max-width: 500px) {
 
   .navBarLogo, .navBarHeader{
@@ -74,19 +76,24 @@
   .mobileGreyLine {
     display: inline-block;
     width: 100%;
-    height: 4em;
-    background-color: #c4c4c4;
+    height: 44px;
+    background: rgba(196, 196, 196, 0.2);
   }
 
-  .navBurgerMobile,
-  .navBarLogoMobile,
+  .navBurgerMobile {
+    width: 16%;
+  }
+  .navBarLogoMobile {
+    width: 65%;
+    text-align: center;
+  }
   .navRightMob {
-    width: 33%;
+    width: 15%;
   }
 
   .navBarHeaderMobile {
     display: flex;
-    margin: .5em 1.5em;
+    margin: .5em 1.5em 1.7em;
     flex-direction: row;
     flex-wrap: nowrap;
     align-content: center;
@@ -95,7 +102,7 @@
   }
 
   .navBarLogoMobile img {
-    width: 104%;
+    width: 73%;
   }
 
   .navRightMob {

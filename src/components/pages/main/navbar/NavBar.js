@@ -32,9 +32,9 @@ export default function NavBar(props) {
           </div>
 
           <div className="navRightMob">
-              <div className="searchIconMob">
+              {/* <div className="searchIconMob">
                 <img src={searchIcon} alt={"searchIcon"} />
-              </div>
+              </div> */}
               <div className="avatarImgMob">
                 <img src={avatarImgMob} alt={"avatarImgMob"} />
               </div>

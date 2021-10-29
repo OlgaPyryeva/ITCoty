@@ -1,7 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&family=Raleway:wght@400;600&display=swap');
 
 .vacanciesMobile,
-.vacanciesWrapperMobile {display: none;}
+.vacanciesWrapperMobile,
+.vacanciesCardContainerMobile {display: none;}
 
 .vacanciesCardContainer {
   display: flex;
@@ -78,6 +79,8 @@
 } */
 
 
+
+/* Mobile version style */
 @media screen and (max-width: 500px) {
   .vacanciesDesktop,
   .vacanciesWrapperDesktop,
@@ -91,7 +94,7 @@
     display: flex;
   }
 
-  .vacanciesCardContainer {
+  .vacanciesCardContainerMobile {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -194,5 +197,6 @@
     top: -19px;
     right: -169px;
   }
+
 
 }

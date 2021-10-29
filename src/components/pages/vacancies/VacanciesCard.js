@@ -30,10 +30,39 @@ export default function VacanciesCard() {
       </div>
     </div>
   </div>
+
     {/*mobile version ------------- */}
-    <div className="vacanciesMobile">
+    {/* <div className="vacanciesMobile">
     <div className="vacanciesWrapperMobile">
-      <div className="vacanciesCardContainer">
+    <div className="containerMobile">
+    <div className="downInfo">
+      <div className="minsk">
+        <div className="vacanciesCardBottom">
+        <img src={point} alt="{point}" />Minsk, BY</div>
+      </div>
+      <div className="cost">
+        <div className="vacanciesPrice">
+        <img src={money} alt="{money}" />$ 1100</div>
+      </div>
+      <div className="remote">
+        <div className="vacanciesCardStatus">
+        <img src={remote} alt="{remote}" />REMOTE</div>
+      </div>
+    </div>
+    <div className="logo">
+      <div className="vacanciesCardLogo">
+      <img src={logo} alt={logo} /></div>
+    </div>
+    <div className="best">
+      <div className="markerVacanciesMobile"><img src={marker} alt="{marker}" /></div>
+    </div>
+    <div className="text">
+      <div className="vacanciesCardTitle">Wargaming</div>
+      <div className="nameVacancies">Название вакансии</div>
+      <div className="lavelWorker">Уровень сотрудника</div>
+    </div>
+  </div> */}
+      <div className="vacanciesCardContainerMobile">
               <div className="vacanciesCardLogo">
                 <img src={logo} alt={logo} />
               </div>
@@ -48,8 +77,8 @@ export default function VacanciesCard() {
                 <div className="vacanciesCardStatus">
                 <img src={remote} alt="{remote}" />REMOTE</div>
     </div>
-    </div>
-    </div>
+    {/* </div> */}
+    {/* </div> */}
     </>
   );
 }
