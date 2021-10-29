@@ -90,9 +90,9 @@
     display: block;
   }
 
-  .vacanciesWrapperMobile {
+  /* .vacanciesWrapperMobile {
     display: flex;
-  }
+  } */
 
   .vacanciesCardContainerMobile {
     display: flex;
@@ -107,12 +107,13 @@
     margin: 7px 24px;
     filter: drop-shadow(2px 4px 5px #CCCCCC);
   }
-
+/*   version x-2
   .vacanciesCardContainer div {
     display: inline-block;
     height: fit-content;
     position: relative;
   }
+
 
   .vacanciesCardLogo img {
       width: 40px;
@@ -130,6 +131,8 @@
     top: 2px;
     right: -10px;
   }
+
+
 
   .nameVacancies,
   .lavelWorker {
@@ -196,7 +199,7 @@
     position: absolute;
     top: -19px;
     right: -169px;
-  }
+  } */
 
 
 }

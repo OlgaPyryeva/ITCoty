@@ -62,8 +62,11 @@ export default function VacanciesCard() {
       <div className="lavelWorker">Уровень сотрудника</div>
     </div>
   </div> */}
+
+
+  {/* version x-4 */}
       <div className="vacanciesCardContainerMobile">
-              <div className="vacanciesCardLogo">
+              {/* <div className="vacanciesCardLogo">
                 <img src={logo} alt={logo} />
               </div>
                 <div className="vacanciesCardTitle">Wargaming</div>
@@ -75,10 +78,10 @@ export default function VacanciesCard() {
                 <div className="vacanciesPrice">
                 <img src={money} alt="{money}" />$ 1100</div>
                 <div className="vacanciesCardStatus">
-                <img src={remote} alt="{remote}" />REMOTE</div>
+                <img src={remote} alt="{remote}" />REMOTE</div> */}
     </div>
-    {/* </div> */}
-    {/* </div> */}
+    {/* </div>
+    </div> */}
     </>
   );
 }
