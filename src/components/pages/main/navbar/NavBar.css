@@ -126,10 +126,10 @@
   }
 
   .menuItemMobile {
-    width: 88%;
+    width: 100%;
     display: flex;
-    justify-content: space-between;
-    padding-bottom: 7px;
+    justify-content: space-evenly;
+    padding-bottom: 5px;
     border-bottom: 1px solid #C4C4C4;
   }
 
@@ -137,21 +137,22 @@
     text-align: center;
     list-style: none;
     text-decoration: none!important;
-    font-family: Raleway;
     font-style: normal;
     font-weight: normal;
-    font-size: 12px;
+    font-size: 14px;
     line-height: 134.09%;
-    color: #707070;
+    font-family: Roboto;
+    color: #828080;
   }
 
   .menuItemMobile li a {
     text-decoration: none;
-    color: #707070;
+    color: #828080;
   }
 
   .menuItemMobile li a:hover {
-    padding-bottom: 7px;
+    color: #282A3D;
+    padding-bottom: 5px;
     border-bottom: 3px solid #4985FF;
   }
 
