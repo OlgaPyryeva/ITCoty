@@ -62,8 +62,10 @@ export default function NavBar(props) {
       {/* String search */}
       <div className="searchStrMobile">
         <form className="formSearchMobile" action="">
+          <div className="btnInputDivMobile">
+           <button className="buttonSearchMobile" type="submit"><img src={searchImgMob} alt={"searchImgMob"} /></button>
           <input className="inputSearchMobile" type="search" placeholder="Должность"></input>
-          <button className="buttonSearchMobile" type="submit"><img src={searchImgMob} alt={"searchImgMob"} /></button>
+          </div>
         </form>
       </div>
 
