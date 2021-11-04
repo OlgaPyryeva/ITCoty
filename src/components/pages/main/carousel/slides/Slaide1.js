@@ -12,7 +12,9 @@ export default function Slaide1() {
       <div className="slaiderContainer">
         <div className="slaiderText">
           <div className="slaiderTitle">
-            <h1>Удобный поиск стажировок и вакансий в IT</h1>
+            <div>
+              Удобный поиск стажировок <br /> и вакансий в IT
+            </div>
           </div>
           <div className="slaiderSubtitle">
             Краткий текст с описанием преимуществ ресурса, предложение, от
@@ -22,6 +24,7 @@ export default function Slaide1() {
             <button>Подробнее</button>
           </div>
         </div>
+
         <div className="slaiderImg">
           <img src={imgOne} alt="img one" />
         </div>

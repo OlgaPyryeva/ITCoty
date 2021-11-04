@@ -15,7 +15,7 @@ export default function Footer() {
             <div className="footerLogo">
               <img src={logoChB} alt="{logoChB}" />
             </div>
-            <div className="fone">+ 375 (29) 333 66 55 </div>
+            <div className="fone">+ 375 (29) 333 66 55</div>
             <div className="site">it-coty@gmail.com</div>
           </div>
 

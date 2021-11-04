@@ -13,11 +13,11 @@
 .newsTitle {
   font-size: 2.25em;
   font-weight: 500;
-  font-size: 36px;
-  line-height: 134.09%;
+  font-size: 2.25rem;
+  line-height: 2.25rem;
   text-align: left;
   color: #8d8e8d;
-  padding: 10px 0 10px 155px;
+  padding: 10px 0 10px 5.5%;
 }
 .newsCard {
   display: flex;
@@ -34,7 +34,7 @@
   align-items: center;
   width: 140px;
   font-weight: 600;
-  font-size: 1.25em;
+  font-size: 1.25rem;
   color: #4985ff;
   padding-top: 5px;
   margin-left: 45%;
@@ -42,9 +42,11 @@
 }
 @media screen and (max-width: 500px) {
   .newsTitle {
-    padding-left: 5px;
+    padding: 5px 0;
+    font-size: 1.5rem;
+    margin: auto;
   }
   .allNews {
-    margin-left: 5%;
+    margin: auto;
   }
 }

@@ -11,6 +11,7 @@
   margin: 20px;
 }
 .vacanciesCardLogo img {
+  width: 90%;
   padding: 0 5px;
 }
 .vacanciesCardText {
@@ -19,19 +20,19 @@
   line-height: 100%;
   border-radius: 12px;
   font-weight: 600;
-  font-size: 1.5em;
+  font-size: 1.5rem;
   color: #4985ff;
 }
 .vacanciesCardTitle {
   font-weight: normal;
-  font-size: 1.125em;
+  font-size: 1.125rem;
   line-height: 134.09%;
   color: #4985ff;
   padding-bottom: 5px;
 }
 .vacanciesCardBottom {
   font-weight: normal;
-  font-size: 1.125em;
+  font-size: 1.125rem;
   line-height: 134.09%;
   color: #4985ff;
   padding-top: 10px;
@@ -40,14 +41,14 @@
   display: flex;
   flex-direction: column;
   font-weight: 600;
-  font-size: 1.5em;
+  font-size: 1.5rem;
   line-height: 134.09%;
   text-align: right;
   color: #8d8e8d;
 }
 .vacanciesCardStatus {
   font-weight: normal;
-  font-size: 0.875em;
+  font-size: 0.875rem;
   line-height: 134.09%;
   color: #f56462;
 }
@@ -59,15 +60,27 @@
   box-sizing: border-box;
   border-radius: 12px;
   font-weight: normal;
-  font-size: 1em;
+  font-size: 1rem;
   line-height: 134.09%;
   text-align: center;
   color: #4985ff;
   margin-top: 25px;
   margin-right: 20px;
 }
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 580px) {
   .vacanciesCardContainer {
-    height: 385px;
+    height: 150px;
+  }
+  .vacanciesCardText {
+    font-size: 1rem;
+  }
+  .vacanciesCardPrice button {
+    width: 100px;
+    height: 25px;
+  }
+}
+@media screen and (max-width: 430px) {
+  .vacanciesCardContainer {
+    height: 220px;
   }
 }
