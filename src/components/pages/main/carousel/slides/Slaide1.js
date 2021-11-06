@@ -5,10 +5,16 @@ import imgOne from "../../../../img/imgOne.svg";
 export default function Slaide1() {
   return (
     <div className="slaiderWrapper">
+      <div className="backgroundWrapper">
+        <div className="background"></div>
+        <div className="backgroundTwo"></div>
+      </div>
       <div className="slaiderContainer">
         <div className="slaiderText">
           <div className="slaiderTitle">
-            <h1>Удобный поиск стажировок и вакансий в IT</h1>
+            <div>
+              Удобный поиск стажировок <br /> и вакансий в IT
+            </div>
           </div>
           <div className="slaiderSubtitle">
             Краткий текст с описанием преимуществ ресурса, предложение, от
@@ -18,12 +24,9 @@ export default function Slaide1() {
             <button>Подробнее</button>
           </div>
         </div>
-        <div className="backgroundWrapper">
-          <div className="background"></div>
-          <div className="backgroundTwo"></div>
-          <div className="backgroundImg">
-            <img src={imgOne} alt="img one" />
-          </div>
+
+        <div className="slaiderImg">
+          <img src={imgOne} alt="img one" />
         </div>
       </div>
     </div>
