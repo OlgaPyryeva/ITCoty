@@ -5,7 +5,7 @@
 }
 .newsContainer {
   flex-direction: column;
-  height: 1024px;
+  min-height: 1024px;
   color: #8d8e8d;
   background: #e5e5e5;
   box-sizing: border-box;

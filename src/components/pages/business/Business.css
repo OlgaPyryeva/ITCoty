@@ -1,5 +1,5 @@
 .businessContainer {
-  height: 1024px;
+  min-height: 1024px;
   color: #ffffff;
   background: #4985ff;
   box-sizing: border-box;

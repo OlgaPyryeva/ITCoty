@@ -1,5 +1,5 @@
 .eventContainer {
-  height: 1024px;
+  min-height: 1024px;
   color: #ffffff;
   background: #4985ff;
   /* border: 1px solid black; */
