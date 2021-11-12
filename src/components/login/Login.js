@@ -72,7 +72,9 @@ export default function Login(props) {
 
   return (
     <div className="loginWrapper">
-      <div className="loginContainer ">
+
+      <div className="loginContainer">
+
         <div>
           <button className="closeBtn" onClick={() => setPopup(!popup)}>
             <img src={x} alt="{x}" />
