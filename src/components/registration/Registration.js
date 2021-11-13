@@ -1,13 +1,12 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import { Link } from "react-router-dom";
-import Policy from "../docs/Policy";
-import Rules from "../docs/Rules";
+
 import SocialNetworkReg from "../socialNetworkReg/SocialNetworkReg";
 import x from "../img/x.svg";
 import eye from "../img/eye.svg";
 import eyeNo from "../img/eyeNo.svg";
 import "./Registration.css";
+import { registration } from "../actions/user";
 
 export default function Registration(props) {
   const {
@@ -23,7 +22,7 @@ export default function Registration(props) {
   const [passwordType, setPasswordType] = useState(true);
   const [email, setEmail] = useState();
   const [password, setPassword] = useState();
-  const [checkPassword, setCheckPassword] = useState();
+
   const [emailVisited, setEmailVisited] = useState(false);
   const [passwordVisited, setPasswordVisited] = useState(false);
   const [emailError, setEmailError] = useState("email не может быть пустым");
@@ -92,7 +91,7 @@ export default function Registration(props) {
 
   return (
     <div className="loginWrapper">
-      <div className="loginContainer container">
+      <div className="loginContainer">
         <div>
           <button className="closeBtn" onClick={() => setPopupReg(!popupReg)}>
             <img src={x} alt="{x}" />

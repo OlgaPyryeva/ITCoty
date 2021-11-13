@@ -5,10 +5,13 @@ import SocialNetworkReg from "../socialNetworkReg/SocialNetworkReg";
 import x from "../img/x.svg";
 import eye from "../img/eye.svg";
 import eyeNo from "../img/eyeNo.svg";
+import { useDispatch } from "react-redux";
+import { login } from "../actions/user";
 
 export default function Login(props) {
   const { setPopup, popup, toggle } = props;
   const [passwordType, setPasswordType] = useState(true);
+  const dispatch = useDispatch();
 
   const [email, setEmail] = useState();
   const [password, setPassword] = useState();
@@ -18,16 +21,6 @@ export default function Login(props) {
   const [passwordError, setPasswordError] = useState(
     "пароль не может быть пустым"
   );
-  // const [formValid, setFormValid] = useState(false);
-
-  //если нет ошибок то кнопка "Войти" активна
-  // useEffect(() => {
-  //   if (emailError && passwordError) {
-  //     setFormValid(false);
-  //   } else {
-  //     setFormValid(true);
-  //   }
-  // }, [emailError, passwordError]);
 
   const emailHandler = (e) => {
     setEmail(e.target.value);
@@ -79,7 +72,7 @@ export default function Login(props) {
 
   return (
     <div className="loginWrapper">
-      <div className="loginContainer container">
+      <div className="loginContainer ">
         <div>
           <button className="closeBtn" onClick={() => setPopup(!popup)}>
             <img src={x} alt="{x}" />
@@ -137,7 +130,11 @@ export default function Login(props) {
           <button className="newPassword"> Восстановить пароль?</button>
 
           <div>
-            <button onClick={postData} className="btn">
+            {/* <button onClick={postData} className="btn"> */}
+            <button
+              onClick={() => dispatch(login(email, password))}
+              className="btn"
+            >
               Войти
             </button>
           </div>

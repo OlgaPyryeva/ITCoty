@@ -4,7 +4,7 @@ import "../business/Business.css";
 export default function Business() {
   return (
     <div className="businessWrapper">
-      <div className="businessContainer">
+      <div className="businessContainer container">
         <div className="businessTitle">Бизнесу</div>
       </div>
     </div>

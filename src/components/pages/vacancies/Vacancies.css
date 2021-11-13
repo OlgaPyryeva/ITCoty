@@ -5,7 +5,7 @@
 }
 .vacanciesContainer {
   flex-direction: column;
-  height: 1024px;
+  min-height: 1024px;
   color: #ffffff;
   background: #4985ff;
   box-sizing: border-box;
@@ -36,6 +36,8 @@
 }
 @media screen and (max-width: 500px) {
   .vacanciesTitle {
-    padding-left: 5px;
+    padding: 5px;
+
+    font-size: 1.5em;
   }
 }
